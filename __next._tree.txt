@@ -1,0 +1,12 @@
+:HL["/claudia-house/_next/static/chunks/090k_r9bbzpyo.css","style"]
+:HL["/claudia-house/_next/static/media/03bda585a99c6450-s.p.32sris142tqlb.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/claudia-house/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/claudia-house/images/shared/hero-background.jpg","image"]
+:HL["/claudia-house/images/shared/banner-claudia.jpg","image"]
+:HL["/claudia-house/images/gallery/gallery-01-front-porch-entrance.jpg","image"]
+:HL["/claudia-house/images/gallery/gallery-02-front-door-autumn.jpg","image"]
+:HL["/claudia-house/images/gallery/gallery-16-back-entrance-ramp.jpeg","image"]
+:HL["/claudia-house/images/gallery/gallery-05-living-room-fireplace.jpg","image"]
+:HL["/claudia-house/images/gallery/gallery-06-living-room-lamp.jpg","image"]
+:HL["/claudia-house/images/gallery/gallery-07-inspirational-posters-wall.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"U-35lpqvegRll1JxN5FN0"}
