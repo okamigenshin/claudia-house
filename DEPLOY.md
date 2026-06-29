@@ -1,7 +1,38 @@
 # Claudia House — Build & Deploy Guide
 
-A **Next.js 16** site that builds to a **fully static** `out/` folder — no Node runtime needed on the
-server. Serve it with nginx on your VPS.
+A **Next.js 16** site that builds to a **fully static** `out/` folder — no Node runtime needed.
+
+**Live site:** https://okamigenshin.github.io/claudia-house/
+**Repo:** https://github.com/okamigenshin/claudia-house
+
+---
+
+## Deploy (current setup: GitHub Pages)
+
+The site is hosted on GitHub Pages from the **`gh-pages`** branch. To publish changes:
+
+```bash
+cd website
+npm run deploy      # builds, adds .nojekyll, pushes out/ to the gh-pages branch
+```
+
+That's it — Pages rebuilds automatically and the live site updates in ~1 minute.
+Source code lives on `master`; the built site lives on `gh-pages` (don't edit it by hand).
+
+> **Subpath note:** because the URL is `…github.io/claudia-house/`, `basePath` is set to
+> `/claudia-house` in `next.config.ts` (and `lib/config.ts`). If you rename the repo or move to a
+> custom domain (e.g. claudiahouse.com), update both — for a custom domain, set `basePath` to `""`
+> and add a `public/CNAME` file containing the domain.
+
+> **Optional — push-to-deploy via Actions:** to rebuild on every `git push` instead of running
+> `npm run deploy`, grant the workflow scope (`gh auth refresh -s workflow`) and add a Pages Actions
+> workflow. Ask and I'll set it up.
+
+---
+
+## Alternative: VPS + nginx
+
+If you later move off Pages, the same static `out/` serves from nginx.
 
 ---
 
