@@ -19,14 +19,24 @@ npm run deploy      # builds, adds .nojekyll, pushes out/ to the gh-pages branch
 That's it — Pages rebuilds automatically and the live site updates in ~1 minute.
 Source code lives on `master`; the built site lives on `gh-pages` (don't edit it by hand).
 
-> **Subpath note:** because the URL is `…github.io/claudia-house/`, `basePath` is set to
-> `/claudia-house` in `next.config.ts` (and `lib/config.ts`). If you rename the repo or move to a
-> custom domain (e.g. claudiahouse.com), update both — for a custom domain, set `basePath` to `""`
-> and add a `public/CNAME` file containing the domain.
+---
 
-> **Optional — push-to-deploy via Actions:** to rebuild on every `git push` instead of running
-> `npm run deploy`, grant the workflow scope (`gh auth refresh -s workflow`) and add a Pages Actions
-> workflow. Ask and I'll set it up.
+## Moving to another host (Vercel, Netlify, custom domain)
+
+The site is portable. `basePath` is `/claudia-house` **only because** the GitHub Pages URL is
+`…github.io/claudia-house/`. For any **root** host (Vercel, Netlify, or claudiahouse.com), build
+with the base path empty — no code changes needed:
+
+```bash
+NEXT_PUBLIC_BASE_PATH= npm run build     # -> out/ with root-relative paths
+```
+
+- **Vercel/Netlify:** connect the GitHub repo and set the env var `NEXT_PUBLIC_BASE_PATH` to empty
+  (or `/`). They auto-build on every push — you can drop the `gh-pages` deploy script entirely.
+- **Custom domain on GitHub Pages:** add a `public/CNAME` file containing the domain, set
+  `NEXT_PUBLIC_BASE_PATH=` empty, and point DNS at GitHub.
+
+Default (no env var) keeps the current GitHub Pages `/claudia-house` setup working as-is.
 
 ---
 
