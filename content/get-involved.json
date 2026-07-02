@@ -1,0 +1,32 @@
+{
+  "bannerTitle": "Join our mission",
+  "bannerLead": "Give, volunteer, or build a career — every contribution helps a young person become a future leader.",
+  "donateEyebrow": "Make a Donation",
+  "donateTitle": "Seed a brighter future",
+  "donateBody1": "We need seed money to keep building Claudia House — from home remodeling to furnishing. Your gift helps fight youth homelessness and gives young people the guidance to become self-sufficient adults and productive members of society.",
+  "donateBody2": "Claudia House is a tax-exempt public charity under IRC Section 501(c)(3). Donations are tax-deductible (official IRS approval letter available on request).",
+  "donateBoxTitle": "Give today",
+  "donateAmounts": ["$25", "$50", "$100", "$250", "Other"],
+  "donateButton": "Donate with PayPal",
+  "donateUrl": "#",
+  "fredMeyerImage": "/images/gallery/gallery-17-garden-raised-bed.jpeg",
+  "fredMeyerImageAlt": "Raised garden bed at Claudia House",
+  "fredMeyerEyebrow": "When You Shop, You Give",
+  "fredMeyerTitle": "Fred Meyer Community Rewards",
+  "fredMeyerBody": "Link your Rewards Card to Claudia House (code PQ447) and we receive quarterly donations from Fred Meyer — at no cost to you. Just log in to your rewards account, search 'Claudia House,' and link.",
+  "volunteerEyebrow": "Volunteer Today",
+  "volunteerTitle": "Share your time & talent",
+  "volunteerIntro": "We're building a pool of drivers, mentors, and professionals who can contribute skills and time to youth learning and development.",
+  "volunteerCards": [
+    { "title": "Mentor", "body": "Be a steady, encouraging presence for a young person." },
+    { "title": "Drive", "body": "Help youth get to school, work, appointments, and outings." },
+    { "title": "Teach a Skill", "body": "Share your professional expertise through workshops." }
+  ],
+  "careersEyebrow": "Careers",
+  "careersTitle": "We're hiring",
+  "jobs": [
+    { "title": "Case Manager", "meta": "Full-time · from $25/hr", "body": "Client-centered, trauma-informed case management for justice-involved young adults (18–25). Wed–Sun, 8am–5pm, on-site." },
+    { "title": "Direct Care Staff", "meta": "Part-time · $20/hr", "body": "Daily supervision supporting independent-living skill development in a trauma-informed residential setting. Fri–Sun." }
+  ],
+  "supportersEyebrow": "Our Supporters"
+}

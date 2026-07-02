@@ -1,20 +1,20 @@
 import PageBanner from "@/components/PageBanner";
-import { site } from "@/lib/content";
+import { contact, site } from "@/lib/content";
 
 export const metadata = { title: "Contact | Claudia House" };
 
 export default function Contact() {
   return (
     <>
-      <PageBanner crumb="Contact" title="Get in touch" lead="Questions, referrals, volunteering, or partnership — we'd love to hear from you." />
+      <PageBanner crumb="Contact" title={contact.bannerTitle} lead={contact.bannerLead} />
 
       <section className="section">
         <div className="wrap grid gap-16 lg:grid-cols-2">
           {/* FORM */}
           <div>
-            <h2 className="text-[2rem]">Send us a message</h2>
-            {/* Static export: wire this to a form service (Formspree/Web3Forms) or an email backend. */}
-            <form className="mt-6" action="https://formspree.io/f/your-id" method="POST">
+            <h2 className="text-[2rem]">{contact.formTitle}</h2>
+            {/* Static export: form posts to the service configured in content/contact.json (formAction). */}
+            <form className="mt-6" action={contact.formAction} method="POST">
               <div className="grid gap-5 sm:grid-cols-2">
                 <Field label="First name" name="first_name" />
                 <Field label="Last name" name="last_name" />
@@ -23,11 +23,7 @@ export default function Contact() {
               <div className="mb-5">
                 <label className="mb-2 block text-sm font-semibold text-[var(--color-primary-deep)]">Reason for contact</label>
                 <select name="reason" className="w-full rounded-[10px] border border-[var(--color-line)] bg-white px-4 py-3.5 text-[1.0625rem]">
-                  <option>General inquiry</option>
-                  <option>Make a referral</option>
-                  <option>Volunteer</option>
-                  <option>Donate / sponsor</option>
-                  <option>Careers</option>
+                  {contact.reasons.map((r) => <option key={r}>{r}</option>)}
                 </select>
               </div>
               <div className="mb-6">
@@ -40,7 +36,7 @@ export default function Contact() {
 
           {/* DETAILS */}
           <div>
-            <h2 className="text-[2rem]">Contact details</h2>
+            <h2 className="text-[2rem]">{contact.detailsTitle}</h2>
             <div className="mt-6">
               <Detail title="Address"><span className="soft">{site.address}</span></Detail>
               <Detail title="Phone"><a href={site.phoneHref}>{site.phone}</a></Detail>
@@ -53,7 +49,7 @@ export default function Contact() {
               title="Map to Claudia House"
               className="mt-7 h-64 w-full rounded-2xl border border-[var(--color-line)]"
               loading="lazy"
-              src="https://www.google.com/maps?q=7310+SE+Lambert+St,+Portland,+OR+97206&output=embed"
+              src={`https://www.google.com/maps?q=${encodeURIComponent(contact.mapQuery)}&output=embed`}
             />
           </div>
         </div>
@@ -62,9 +58,9 @@ export default function Contact() {
       {/* NEWSLETTER */}
       <section className="bg-[var(--color-tint)] py-20">
         <div className="wrap mx-auto max-w-xl text-center">
-          <p className="eyebrow">Stay Connected</p>
-          <h2 className="mt-4">Subscribe for updates</h2>
-          <p className="soft mt-4">News, events, and ways to help — straight to your inbox.</p>
+          <p className="eyebrow">{contact.newsletterEyebrow}</p>
+          <h2 className="mt-4">{contact.newsletterTitle}</h2>
+          <p className="soft mt-4">{contact.newsletterBody}</p>
           <form className="mx-auto mt-7 flex max-w-md gap-3">
             <input type="email" placeholder="Your email" aria-label="Email" className="flex-1 rounded-full border border-[var(--color-line)] bg-white px-5 py-3.5 text-[1.0625rem]" />
             <button type="submit" className="btn btn-primary">Subscribe</button>

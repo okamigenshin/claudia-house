@@ -1,0 +1,276 @@
+# Pages CMS configuration — https://pagescms.org
+# Defines the editing forms the client sees. Content is stored in /content/*.json.
+
+media:
+  - name: images
+    label: Images
+    input: public/images
+    output: /images
+
+content:
+  # ---------------- Site settings ----------------
+  - name: settings
+    label: Site Settings
+    type: file
+    path: content/settings.json
+    fields:
+      - { name: name, label: Organization name, type: string }
+      - { name: tagline, label: Tagline, type: string }
+      - { name: address, label: Address, type: string }
+      - { name: phone, label: Phone, type: string }
+      - { name: phoneHref, label: Phone link (tel:...), type: string }
+      - { name: email, label: General email, type: string }
+      - { name: careersEmail, label: Careers email, type: string }
+      - { name: supporters, label: Supporters, type: string, list: true }
+
+  # ---------------- Home page ----------------
+  - name: home
+    label: Home Page
+    type: file
+    path: content/home.json
+    fields:
+      - { name: heroEyebrow, label: Hero eyebrow, type: string }
+      - { name: heroTitle, label: Hero title, type: string }
+      - { name: heroLead, label: Hero text, type: text }
+      - { name: heroPrimaryCta, label: Hero primary button, type: string }
+      - { name: heroSecondaryCta, label: Hero secondary button, type: string }
+      - { name: heroImage, label: Hero image, type: image }
+      - { name: heroImageAlt, label: Hero image alt text, type: string }
+      - { name: missionEyebrow, label: Mission eyebrow, type: string }
+      - { name: missionTitle, label: Mission title, type: string }
+      - { name: missionBody, label: Mission text, type: text }
+      - name: stats
+        label: Impact stats
+        type: object
+        list: true
+        fields:
+          - { name: n, label: Number, type: string }
+          - { name: l, label: Label, type: string }
+      - { name: programsEyebrow, label: Programs eyebrow, type: string }
+      - { name: programsTitle, label: Programs title, type: string }
+      - name: pillars
+        label: Program pillars
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: body, label: Body, type: text }
+      - { name: galleryEyebrow, label: Gallery eyebrow, type: string }
+      - { name: galleryTitle, label: Gallery title, type: string }
+      - { name: galleryBody, label: Gallery text, type: text }
+      - { name: galleryImage, label: Gallery feature image, type: image }
+      - { name: galleryImageAlt, label: Gallery image alt text, type: string }
+      - { name: quote, label: Quote, type: text }
+      - { name: getInvolvedEyebrow, label: Get-involved eyebrow, type: string }
+      - { name: getInvolvedTitle, label: Get-involved title, type: string }
+      - name: getInvolvedCards
+        label: Get-involved cards
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: body, label: Body, type: text }
+          - { name: cta, label: Button label, type: string }
+      - { name: partnersEyebrow, label: Partners eyebrow, type: string }
+
+  # ---------------- About page ----------------
+  - name: about
+    label: About Page
+    type: file
+    path: content/about.json
+    fields:
+      - { name: bannerTitle, label: Banner title, type: string }
+      - { name: bannerLead, label: Banner text, type: text }
+      - { name: storyImage, label: Story image, type: image }
+      - { name: storyImageAlt, label: Story image alt text, type: string }
+      - { name: storyEyebrow, label: Story eyebrow, type: string }
+      - { name: storyTitle, label: Story title, type: string }
+      - { name: storyBody1, label: Story paragraph 1, type: text }
+      - { name: storyBody2, label: Story paragraph 2, type: text }
+      - { name: missionCardTitle, label: Mission card title, type: string }
+      - { name: missionCardBody, label: Mission card body, type: text }
+      - { name: visionCardTitle, label: Vision card title, type: string }
+      - { name: visionCardBody, label: Vision card body, type: text }
+      - { name: commitmentEyebrow, label: Commitment eyebrow, type: string }
+      - { name: commitmentTitle, label: Commitment title, type: string }
+      - { name: commitmentIntro, label: Commitment intro, type: text }
+      - name: commitments
+        label: Commitments
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: body, label: Body, type: text }
+      - { name: ctaTitle, label: CTA title, type: string }
+      - { name: ctaLead, label: CTA text, type: text }
+      - { name: ctaButton, label: CTA button, type: string }
+
+  # ---------------- Programs page ----------------
+  - name: programs
+    label: Programs Page
+    type: file
+    path: content/programs.json
+    fields:
+      - { name: bannerTitle, label: Banner title, type: string }
+      - { name: bannerLead, label: Banner text, type: text }
+      - name: stages
+        label: Stages
+        type: object
+        list: true
+        fields:
+          - { name: n, label: Stage number, type: string }
+          - { name: t, label: Title, type: string }
+          - { name: b, label: Body, type: text }
+          - { name: feature, label: Highlight this stage, type: boolean }
+      - { name: focusEyebrow, label: Focus eyebrow, type: string }
+      - { name: focusTitle, label: Focus title, type: string }
+      - name: focusAreas
+        label: Focus areas
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: body, label: Body, type: text }
+      - { name: educationEyebrow, label: Education eyebrow, type: string }
+      - { name: educationTitle, label: Education title, type: string }
+      - { name: educationBody1, label: Education paragraph 1, type: text }
+      - { name: educationBody2, label: Education paragraph 2, type: text }
+      - { name: educationImage, label: Education image, type: image }
+      - { name: educationImageAlt, label: Education image alt text, type: string }
+      - { name: orientationEyebrow, label: Orientation eyebrow, type: string }
+      - { name: orientationTitle, label: Orientation title, type: string }
+      - name: orientation
+        label: Orientation weeks
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Week label, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: body, label: Body, type: text }
+      - { name: eligibilityEyebrow, label: Eligibility eyebrow, type: string }
+      - { name: eligibilityTitle, label: Eligibility title, type: string }
+      - { name: eligibilityBody, label: Eligibility body, type: text }
+      - { name: referralsEyebrow, label: Referrals eyebrow, type: string }
+      - { name: referralsTitle, label: Referrals title, type: string }
+      - { name: referralsBody, label: Referrals body, type: text }
+      - { name: ctaTitle, label: CTA title, type: string }
+      - { name: ctaLead, label: CTA text, type: text }
+      - { name: ctaButton, label: CTA button, type: string }
+
+  # ---------------- Team page ----------------
+  - name: team
+    label: Team Page
+    type: file
+    path: content/team.json
+    fields:
+      - { name: bannerTitle, label: Banner title, type: string }
+      - { name: bannerLead, label: Banner text, type: text }
+      - { name: staffEyebrow, label: Staff eyebrow, type: string }
+      - { name: staffTitle, label: Staff title, type: string }
+      - name: staff
+        label: Staff members
+        type: object
+        list: true
+        fields:
+          - { name: img, label: Photo, type: image }
+          - { name: name, label: Name, type: string }
+          - { name: role, label: Role, type: string }
+          - { name: bio, label: Bio, type: text }
+      - { name: boardEyebrow, label: Board eyebrow, type: string }
+      - { name: boardTitle, label: Board title, type: string }
+      - name: board
+        label: Board members
+        type: object
+        list: true
+        fields:
+          - { name: img, label: Photo, type: image }
+          - { name: name, label: Name, type: string }
+          - { name: role, label: Role, type: string }
+          - { name: bio, label: Bio, type: text }
+      - { name: ctaTitle, label: CTA title, type: string }
+      - { name: ctaLead, label: CTA text, type: text }
+      - { name: ctaButton, label: CTA button, type: string }
+
+  # ---------------- Gallery page ----------------
+  - name: gallery
+    label: Gallery Page
+    type: file
+    path: content/gallery.json
+    fields:
+      - { name: bannerTitle, label: Banner title, type: string }
+      - { name: bannerLead, label: Banner text, type: text }
+      - name: images
+        label: Photos
+        type: object
+        list: true
+        fields:
+          - { name: src, label: Photo, type: image }
+          - { name: alt, label: Description (alt text), type: string }
+          - name: cat
+            label: Category
+            type: select
+            options:
+              values: ["Exterior", "Living Spaces", "Bedrooms", "Outdoors & Garden"]
+      - { name: ctaTitle, label: CTA title, type: string }
+      - { name: ctaLead, label: CTA text, type: text }
+      - { name: ctaButton, label: CTA button, type: string }
+
+  # ---------------- Get Involved page ----------------
+  - name: getInvolved
+    label: Get Involved Page
+    type: file
+    path: content/get-involved.json
+    fields:
+      - { name: bannerTitle, label: Banner title, type: string }
+      - { name: bannerLead, label: Banner text, type: text }
+      - { name: donateEyebrow, label: Donate eyebrow, type: string }
+      - { name: donateTitle, label: Donate title, type: string }
+      - { name: donateBody1, label: Donate paragraph 1, type: text }
+      - { name: donateBody2, label: Donate paragraph 2, type: text }
+      - { name: donateBoxTitle, label: Donate box title, type: string }
+      - { name: donateAmounts, label: Suggested amounts, type: string, list: true }
+      - { name: donateButton, label: Donate button label, type: string }
+      - { name: donateUrl, label: Donate link (PayPal URL), type: string }
+      - { name: fredMeyerImage, label: Fred Meyer image, type: image }
+      - { name: fredMeyerImageAlt, label: Fred Meyer image alt text, type: string }
+      - { name: fredMeyerEyebrow, label: Fred Meyer eyebrow, type: string }
+      - { name: fredMeyerTitle, label: Fred Meyer title, type: string }
+      - { name: fredMeyerBody, label: Fred Meyer body, type: text }
+      - { name: volunteerEyebrow, label: Volunteer eyebrow, type: string }
+      - { name: volunteerTitle, label: Volunteer title, type: string }
+      - { name: volunteerIntro, label: Volunteer intro, type: text }
+      - name: volunteerCards
+        label: Volunteer cards
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: body, label: Body, type: text }
+      - { name: careersEyebrow, label: Careers eyebrow, type: string }
+      - { name: careersTitle, label: Careers title, type: string }
+      - name: jobs
+        label: Job openings
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Job title, type: string }
+          - { name: meta, label: Details (hours/pay), type: string }
+          - { name: body, label: Description, type: text }
+      - { name: supportersEyebrow, label: Supporters eyebrow, type: string }
+
+  # ---------------- Contact page ----------------
+  - name: contact
+    label: Contact Page
+    type: file
+    path: content/contact.json
+    fields:
+      - { name: bannerTitle, label: Banner title, type: string }
+      - { name: bannerLead, label: Banner text, type: text }
+      - { name: formTitle, label: Form title, type: string }
+      - { name: formAction, label: Form endpoint (Formspree URL), type: string }
+      - { name: reasons, label: Contact reasons, type: string, list: true }
+      - { name: detailsTitle, label: Details title, type: string }
+      - { name: mapQuery, label: Map address, type: string }
+      - { name: newsletterEyebrow, label: Newsletter eyebrow, type: string }
+      - { name: newsletterTitle, label: Newsletter title, type: string }
+      - { name: newsletterBody, label: Newsletter body, type: text }

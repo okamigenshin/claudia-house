@@ -1,0 +1,21 @@
+{
+  "name": "Claudia House",
+  "tagline": "Where youth dream big",
+  "address": "7310 SE Lambert St, Portland, OR 97206",
+  "phone": "503-379-0116",
+  "phoneHref": "tel:5033790116",
+  "email": "info@claudiahouse.com",
+  "careersEmail": "staff@claudiahouse.com",
+  "supporters": [
+    "Oregon Youth Authority",
+    "Meyer Memorial Trust",
+    "The Collins Foundation",
+    "The Home Depot",
+    "Walmart",
+    "Dutch Bros",
+    "Mod Pizza",
+    "Costco",
+    "NW Collision Services",
+    "Ashley Furniture"
+  ]
+}

@@ -1,13 +1,6 @@
 import Link from "next/link";
-import { pillars, gallery, supporters } from "@/lib/content";
+import { home, gallery, supporters } from "@/lib/content";
 import { asset } from "@/lib/config";
-
-const stats = [
-  { n: "100%", l: "Trauma-informed, culturally responsive care" },
-  { n: "4", l: "Core pillars: Housing, Employment, Education, Finance" },
-  { n: "ILP", l: "Residential Independent Living Program" },
-  { n: "18–25", l: "Young adults served on their path to independence" },
-];
 
 const homeGallery = gallery.slice(0, 6);
 
@@ -18,21 +11,18 @@ export default function Home() {
       <section className="section pt-20">
         <div className="wrap grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
-            <p className="eyebrow">Portland, Oregon · 501(c)(3) Nonprofit</p>
-            <h1 className="mt-4">Where youth dream big</h1>
-            <p className="lead mt-6 max-w-lg">
-              Claudia House gives Oregon&rsquo;s young people stable housing, life skills, and holistic
-              support — so they can overcome obstacles and build self-sufficient futures.
-            </p>
+            <p className="eyebrow">{home.heroEyebrow}</p>
+            <h1 className="mt-4">{home.heroTitle}</h1>
+            <p className="lead mt-6 max-w-lg">{home.heroLead}</p>
             <div className="mt-9 flex flex-wrap gap-4">
-              <Link href="/get-involved" className="btn btn-primary">Support a Youth &rarr;</Link>
-              <Link href="/programs" className="btn btn-outline">Make a Referral</Link>
+              <Link href="/get-involved" className="btn btn-primary">{home.heroPrimaryCta} &rarr;</Link>
+              <Link href="/programs" className="btn btn-outline">{home.heroSecondaryCta}</Link>
             </div>
           </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={asset("/images/shared/hero-background.jpg")}
-            alt="A group of diverse, smiling young people sitting together"
+            src={asset(home.heroImage)}
+            alt={home.heroImageAlt}
             className="aspect-[5/4] w-full rounded-3xl object-cover shadow-sm"
           />
         </div>
@@ -41,20 +31,16 @@ export default function Home() {
       {/* MISSION */}
       <section className="section bg-[var(--color-tint)]">
         <div className="wrap mx-auto max-w-3xl text-center">
-          <p className="eyebrow">Our Mission</p>
-          <h2 className="mt-4">Increasing youth&rsquo;s behavioral, educational, and placement stability</h2>
-          <p className="lead mt-6">
-            Named after a social worker and mother who welcomed teens of every background into her home,
-            Claudia House continues her legacy through short-term emergent and longer-term care built on a
-            balance of mind, body, and spirit.
-          </p>
+          <p className="eyebrow">{home.missionEyebrow}</p>
+          <h2 className="mt-4">{home.missionTitle}</h2>
+          <p className="lead mt-6">{home.missionBody}</p>
         </div>
       </section>
 
       {/* STATS */}
       <section className="section">
         <div className="wrap grid gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((s) => (
+          {home.stats.map((s) => (
             <div key={s.l}>
               <div className="font-display text-[3.5rem] font-black leading-none text-[var(--color-primary)]">{s.n}</div>
               <p className="soft mt-2">{s.l}</p>
@@ -67,11 +53,11 @@ export default function Home() {
       <section className="section bg-[var(--color-tint)]">
         <div className="wrap">
           <div className="mx-auto mb-14 max-w-2xl text-center">
-            <p className="eyebrow">What We Do</p>
-            <h2 className="mt-4">Pathways to independent living</h2>
+            <p className="eyebrow">{home.programsEyebrow}</p>
+            <h2 className="mt-4">{home.programsTitle}</h2>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {pillars.map((p) => (
+            {home.pillars.map((p) => (
               <div key={p.title} className="card">
                 <div className="card-ic"><Dot /></div>
                 <h3>{p.title}</h3>
@@ -90,18 +76,15 @@ export default function Home() {
         <div className="wrap">
           <div className="mb-14 grid items-center gap-14 lg:grid-cols-2">
             <div>
-              <p className="eyebrow">A Real Home</p>
-              <h2 className="mt-4">Step inside Claudia House</h2>
-              <p className="lead mt-5">
-                Comfortable bedrooms, shared living spaces, a garden, and walls full of encouragement —
-                designed so every young person feels they belong.
-              </p>
+              <p className="eyebrow">{home.galleryEyebrow}</p>
+              <h2 className="mt-4">{home.galleryTitle}</h2>
+              <p className="lead mt-5">{home.galleryBody}</p>
               <Link href="/gallery" className="btn btn-outline mt-7">View the gallery &rarr;</Link>
             </div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={asset("/images/shared/banner-claudia.jpg")}
-              alt="The welcoming front porch of Claudia House"
+              src={asset(home.galleryImage)}
+              alt={home.galleryImageAlt}
               className="aspect-[16/10] w-full rounded-3xl object-cover"
             />
           </div>
@@ -118,7 +101,7 @@ export default function Home() {
       <section className="section bg-[var(--color-tint)]">
         <div className="wrap mx-auto max-w-4xl text-center">
           <p className="font-display text-[clamp(1.75rem,3.4vw,2.6rem)] font-bold leading-snug text-[var(--color-primary-deep)]">
-            &ldquo;Do not apologize for who you are or where you are in life — just set your sights high.&rdquo;
+            &ldquo;{home.quote}&rdquo;
           </p>
         </div>
       </section>
@@ -127,20 +110,16 @@ export default function Home() {
       <section className="section">
         <div className="wrap">
           <div className="mx-auto mb-14 max-w-2xl text-center">
-            <p className="eyebrow">Get Involved</p>
-            <h2 className="mt-4">Help a young person build their future</h2>
+            <p className="eyebrow">{home.getInvolvedEyebrow}</p>
+            <h2 className="mt-4">{home.getInvolvedTitle}</h2>
           </div>
           <div className="grid gap-6 lg:grid-cols-3">
-            {[
-              { t: "Donate", b: "Seed our home — from remodeling to furnishings. Tax-deductible 501(c)(3).", c: "Give Now", primary: true },
-              { t: "Volunteer", b: "Mentor, drive, or share a professional skill with our youth.", c: "Join Us" },
-              { t: "Careers", b: "Case Managers & Direct Care staff — do meaningful work.", c: "See Roles" },
-            ].map((x) => (
-              <div key={x.t} className="card">
+            {home.getInvolvedCards.map((x, i) => (
+              <div key={x.title} className="card">
                 <div className="card-ic"><Dot /></div>
-                <h3>{x.t}</h3>
-                <p className="soft mt-2">{x.b}</p>
-                <Link href="/get-involved" className={`btn btn-sm mt-5 ${x.primary ? "btn-primary" : "btn-outline"}`}>{x.c}</Link>
+                <h3>{x.title}</h3>
+                <p className="soft mt-2">{x.body}</p>
+                <Link href="/get-involved" className={`btn btn-sm mt-5 ${i === 0 ? "btn-primary" : "btn-outline"}`}>{x.cta}</Link>
               </div>
             ))}
           </div>
@@ -150,7 +129,7 @@ export default function Home() {
       {/* PARTNERS */}
       <section className="bg-[var(--color-tint)] py-20">
         <div className="wrap">
-          <p className="eyebrow mb-9 text-center">In Partnership With</p>
+          <p className="eyebrow mb-9 text-center">{home.partnersEyebrow}</p>
           <div className="flex flex-wrap justify-center gap-x-10 gap-y-4">
             {supporters.slice(0, 6).map((s) => (
               <span key={s} className="text-lg font-semibold text-[var(--color-primary-deep)] opacity-70">{s}</span>

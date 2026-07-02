@@ -1,0 +1,39 @@
+{
+  "bannerTitle": "Pathways to ILP",
+  "bannerLead": "Helping youth thrive with independent-living skills — before, during, and beyond their stay.",
+  "stages": [
+    { "n": "Stage 01", "t": "Pre-Placement", "b": "Youth build trust with staff before placement — creating connections that lay the foundation for a successful transition.", "feature": false },
+    { "n": "Stage 02", "t": "In-House Support", "b": "Life skills, mentorship, education, and career readiness inside a warm, structured home.", "feature": true },
+    { "n": "Stage 03", "t": "Off-Site Services", "b": "Expanded care: medical & dental, counseling, psychiatric care, and arts & hobby programs.", "feature": false }
+  ],
+  "focusEyebrow": "In-House Support",
+  "focusTitle": "Five core skill areas",
+  "focusAreas": [
+    { "title": "Money Management & Financial Literacy", "body": "Budgeting, smart spending, banking basics, credit confidence." },
+    { "title": "Housing & Daily Living", "body": "Routines, hygiene, meal prep, laundry, apartment readiness & maintenance." },
+    { "title": "Health & Wellness", "body": "Nutrition, exercise, sleep, mental-health check-ins, stress management." },
+    { "title": "Social-Emotional & Communication", "body": "Assertive communication, conflict resolution, online safety, healthy habits." },
+    { "title": "Employment & Education Skills", "body": "Resume writing, interview prep, workplace etiquette, time management, goal planning." }
+  ],
+  "educationEyebrow": "Education Opportunities",
+  "educationTitle": "Real schools, colleges & trades",
+  "educationBody1": "Youth attend public schools (Portland Public, Cleveland, Alliance), colleges & universities (Reed, PSU, Clackamas CC, Concordia), and trade & vocational programs (PCC Swan Island, NW College of Construction, NECA-IBEW, The Tech Academy, and more).",
+  "educationBody2": "Community outings extend the classroom: college & trade visits, business tours, museums, the Oregon Coast & Columbia River Gorge, and public-transit practice.",
+  "educationImage": "/images/gallery/gallery-07-inspirational-posters-wall.jpg",
+  "educationImageAlt": "A wall of inspirational posters inside the home",
+  "orientationEyebrow": "Getting Started",
+  "orientationTitle": "The first two weeks",
+  "orientation": [
+    { "label": "Week 1", "title": "Orientation", "body": "Rapport building, resume development, obtaining ID, bus-pass distribution, and a review of program rules & the handbook." },
+    { "label": "Week 2", "title": "Independence", "body": "Youth may go out independently as long as they return by curfew, with public-transportation support as needed." }
+  ],
+  "eligibilityEyebrow": "Eligibility",
+  "eligibilityTitle": "Case-by-case considerations",
+  "eligibilityBody": "Accepted individually after evaluation. Not appropriate for youth needing acute psychiatric care/hospitalization or who are not yet ready for ILP basics.",
+  "referralsEyebrow": "Referrals",
+  "referralsTitle": "From Oregon Probation & Parole",
+  "referralsBody": "Referrals must include: reformation plan, OYA Risk-Need Assessment (RNA), current & previous treatment recommendations, parole/probation conditions, juvenile court orders, and social & family histories.",
+  "ctaTitle": "Have a youth who needs a placement?",
+  "ctaLead": "Our team is ready to help with referrals and questions.",
+  "ctaButton": "Make a referral"
+}
