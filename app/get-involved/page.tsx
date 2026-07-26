@@ -2,6 +2,7 @@ import Link from "next/link";
 import PageBanner from "@/components/PageBanner";
 import { jobs, majorSupporters, communitySupporters, site } from "@/lib/content";
 import { asset } from "@/lib/config";
+import Icon, { type IconName } from "@/components/Icon";
 
 export const metadata = { title: "Get Involved | Claudia House" };
 
@@ -66,12 +67,12 @@ export default function GetInvolved() {
           </div>
           <div className="grid gap-6 lg:grid-cols-3">
             {[
-              { t: "Mentor", b: "Be a steady, encouraging presence for a young person." },
-              { t: "Drive", b: "Help youth get to school, work, appointments, and outings." },
-              { t: "Teach a Skill", b: "Share your professional expertise through workshops." },
+              { icon: "userPlus", t: "Mentor", b: "Be a steady, encouraging presence for a young person." },
+              { icon: "car", t: "Drive", b: "Help youth get to school, work, appointments, and outings." },
+              { icon: "lightbulb", t: "Teach a Skill", b: "Share your professional expertise through workshops." },
             ].map((x) => (
               <div key={x.t} className="card">
-                <div className="card-ic"><span className="block h-3 w-3 rounded-sm bg-current" /></div>
+                <div className="card-ic"><Icon name={x.icon as IconName} /></div>
                 <h3>{x.t}</h3>
                 <p className="soft mt-2">{x.b}</p>
               </div>

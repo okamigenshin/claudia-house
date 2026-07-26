@@ -21,23 +21,23 @@ export const nav = [
 ];
 
 export const pillars = [
-  { title: "Safe Housing", body: "Short- and long-term Residential ILP placements in a warm, supportive home." },
-  { title: "Employment", body: "Job readiness, career exploration, and placement support." },
-  { title: "Education", body: "Personalized learning, tutoring, and trade & college pathways." },
-  { title: "Financial Literacy", body: "Budgeting, banking, and money management for lasting independence." },
-];
+  { icon: "home", title: "Safe Housing", body: "Short- and long-term Residential ILP placements in a warm, supportive home." },
+  { icon: "briefcase", title: "Employment", body: "Job readiness, career exploration, and placement support." },
+  { icon: "graduation", title: "Education", body: "Personalized learning, tutoring, and trade & college pathways." },
+  { icon: "wallet", title: "Financial Literacy", body: "Budgeting, banking, and money management for lasting independence." },
+] as const;
 
 export const commitments = [
-  { title: "Safe & Supportive Housing", body: "Short- and long-term Residential ILP placements." },
-  { title: "Employment", body: "Job readiness, career exploration, and placement support." },
-  { title: "Education & Career Growth", body: "Personalized learning and skill-building." },
-  { title: "Budgeting & Financial Literacy", body: "Money management and financial independence training." },
-  { title: "Therapeutic & Structured Care", body: "Trauma-informed, culturally responsive environments." },
-  { title: "Holistic Development", body: "Mind-body-spirit strategies that build confidence and resilience." },
-  { title: "Mentorship & Connections", body: "Long-term mentors and support networks." },
-  { title: "Community Engagement", body: "Volunteer opportunities and civic responsibility." },
-  { title: "Diverse & Inclusive", body: "Justice-involved youth of every background, welcomed." },
-];
+  { icon: "home", title: "Safe & Supportive Housing", body: "Short- and long-term Residential ILP placements." },
+  { icon: "briefcase", title: "Employment", body: "Job readiness, career exploration, and placement support." },
+  { icon: "book", title: "Education & Career Growth", body: "Personalized learning and skill-building." },
+  { icon: "wallet", title: "Budgeting & Financial Literacy", body: "Money management and financial independence training." },
+  { icon: "shield", title: "Therapeutic & Structured Care", body: "Trauma-informed, culturally responsive environments." },
+  { icon: "sparkles", title: "Holistic Development", body: "Mind-body-spirit strategies that build confidence and resilience." },
+  { icon: "users", title: "Mentorship & Connections", body: "Long-term mentors and support networks." },
+  { icon: "globe", title: "Community Engagement", body: "Volunteer opportunities and civic responsibility." },
+  { icon: "star", title: "Diverse & Inclusive", body: "Justice-involved youth of every background, welcomed." },
+] as const;
 
 export const focusAreas = [
   { title: "Money Management & Financial Literacy", body: "Budgeting, smart spending, banking basics, credit confidence." },

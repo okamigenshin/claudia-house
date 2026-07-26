@@ -1,4 +1,5 @@
 import PageBanner from "@/components/PageBanner";
+import Icon, { type IconName } from "@/components/Icon";
 import { site } from "@/lib/content";
 
 export const metadata = { title: "Contact | Claudia House" };
@@ -42,9 +43,9 @@ export default function Contact() {
           <div>
             <h2 className="text-[2rem]">Contact details</h2>
             <div className="mt-6">
-              <Detail title="Address"><span className="soft">{site.address}</span></Detail>
-              <Detail title="Phone"><a href={site.phoneHref}>{site.phone}</a></Detail>
-              <Detail title="Email">
+              <Detail icon="mapPin" title="Address"><span className="soft">{site.address}</span></Detail>
+              <Detail icon="phone" title="Phone"><a href={site.phoneHref}>{site.phone}</a></Detail>
+              <Detail icon="mail" title="Email">
                 <a href={`mailto:${site.email}`}>{site.email}</a><br />
                 <a href={`mailto:${site.careersEmail}`}>{site.careersEmail}</a> <span className="soft">(careers)</span>
               </Detail>
@@ -84,10 +85,10 @@ function Field({ label, name, type = "text" }: { label: string; name: string; ty
   );
 }
 
-function Detail({ title, children }: { title: string; children: React.ReactNode }) {
+function Detail({ icon, title, children }: { icon: IconName; title: string; children: React.ReactNode }) {
   return (
     <div className="flex gap-4 border-b border-[var(--color-line)] py-5">
-      <div className="card-ic mb-0 shrink-0"><span className="block h-3 w-3 rounded-sm bg-current" /></div>
+      <div className="card-ic mb-0 shrink-0"><Icon name={icon} size={22} /></div>
       <div><strong className="text-[var(--color-primary-deep)]">{title}</strong><br />{children}</div>
     </div>
   );

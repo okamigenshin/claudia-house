@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { pillars, gallery, supporters } from "@/lib/content";
 import { asset } from "@/lib/config";
+import Icon, { type IconName } from "@/components/Icon";
 
 const stats = [
   { n: "100%", l: "Trauma-informed, culturally responsive care" },
@@ -76,7 +77,7 @@ export default function Home() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {pillars.map((p) => (
               <div key={p.title} className="card">
-                <div className="card-ic"><Dot /></div>
+                <div className="card-ic"><Icon name={p.icon} /></div>
                 <h3>{p.title}</h3>
                 <p className="soft mt-2">{p.body}</p>
               </div>
@@ -135,12 +136,12 @@ export default function Home() {
           </div>
           <div className="grid gap-6 lg:grid-cols-3">
             {[
-              { t: "Donate", b: "Seed our home — from remodeling to furnishings. Tax-deductible 501(c)(3).", c: "Give Now", primary: true },
-              { t: "Volunteer", b: "Mentor, drive, or share a professional skill with our youth.", c: "Join Us" },
-              { t: "Careers", b: "Case Managers & Direct Care staff — do meaningful work.", c: "See Roles" },
+              { icon: "heart", t: "Donate", b: "Seed our home — from remodeling to furnishings. Tax-deductible 501(c)(3).", c: "Give Now", primary: true },
+              { icon: "handHeart", t: "Volunteer", b: "Mentor, drive, or share a professional skill with our youth.", c: "Join Us" },
+              { icon: "briefcase", t: "Careers", b: "Case Managers & Direct Care staff — do meaningful work.", c: "See Roles" },
             ].map((x) => (
               <div key={x.t} className="card">
-                <div className="card-ic"><Dot /></div>
+                <div className="card-ic"><Icon name={x.icon as IconName} /></div>
                 <h3>{x.t}</h3>
                 <p className="soft mt-2">{x.b}</p>
                 <Link href="/get-involved" className={`btn btn-sm mt-5 ${x.primary ? "btn-primary" : "btn-outline"}`}>{x.c}</Link>
@@ -163,8 +164,4 @@ export default function Home() {
       </section>
     </>
   );
-}
-
-function Dot() {
-  return <span className="block h-3 w-3 rounded-sm bg-current" aria-hidden="true" />;
 }

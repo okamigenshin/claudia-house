@@ -1,5 +1,6 @@
 import PageBanner from "@/components/PageBanner";
 import CtaBand from "@/components/CtaBand";
+import Icon from "@/components/Icon";
 import { aboutStory, commitments } from "@/lib/content";
 
 export const metadata = { title: "About | Claudia House" };
@@ -16,20 +17,33 @@ export default function About() {
           <h2 className="mt-4">{aboutStory.title}</h2>
           <p className="soft mt-6">{aboutStory.intro}</p>
 
-          {aboutStory.sections.map((s) => (
-            <div key={s.heading}>
-              <h3 className="mt-12">{s.heading}</h3>
-              {s.paras.map((p, i) => (
-                <p key={i} className="soft mt-4">{p}</p>
-              ))}
-            </div>
-          ))}
+          {aboutStory.sections.map((s, si) => {
+            const m = s.heading.match(/^(\d+)\.\s*(.*)$/);
+            const num = m ? m[1] : String(si + 1);
+            const title = m ? m[2] : s.heading;
+            return (
+              <div key={s.heading} className="mt-14 first:mt-10">
+                <div className="flex items-start gap-4">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] font-display text-lg font-bold text-white">
+                    {num}
+                  </span>
+                  <h3 className="pt-1">{title}</h3>
+                </div>
+                {s.paras.map((p, i) => (
+                  <p key={i} className="soft mt-4">{p}</p>
+                ))}
+              </div>
+            );
+          })}
 
-          <div className="mt-10 border-t border-[var(--color-line)] pt-8">
+          <div className="mt-12">
             {aboutStory.closing.map((p, i) => (
               <p key={i} className="soft mt-4 first:mt-0">{p}</p>
             ))}
-            <p className="mt-8 font-display text-[1.75rem] font-bold leading-snug text-[var(--color-primary-deep)]">
+          </div>
+
+          <div className="mt-10 rounded-2xl border-l-4 border-[var(--color-accent)] bg-[var(--color-tint)] px-8 py-7">
+            <p className="font-display text-[1.6rem] font-bold leading-snug text-[var(--color-primary-deep)]">
               {aboutStory.pullquote}
             </p>
           </div>
@@ -63,7 +77,7 @@ export default function About() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {commitments.map((c) => (
               <div key={c.title} className="card">
-                <div className="card-ic"><span className="block h-3 w-3 rounded-sm bg-current" /></div>
+                <div className="card-ic"><Icon name={c.icon} /></div>
                 <h3>{c.title}</h3>
                 <p className="soft mt-2">{c.body}</p>
               </div>
