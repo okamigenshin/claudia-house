@@ -1,6 +1,6 @@
 import Link from "next/link";
 import PageBanner from "@/components/PageBanner";
-import { jobs, supporters, site } from "@/lib/content";
+import { jobs, majorSupporters, communitySupporters, site } from "@/lib/content";
 import { asset } from "@/lib/config";
 
 export const metadata = { title: "Get Involved | Claudia House" };
@@ -102,12 +102,25 @@ export default function GetInvolved() {
         </div>
       </section>
 
-      {/* SUPPORTERS */}
+      {/* MAJOR SUPPORTERS */}
       <section className="section">
         <div className="wrap">
-          <p className="eyebrow mb-10 text-center">Our Supporters</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            {supporters.map((s) => (
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="eyebrow">Major Supporters</p>
+            <p className="soft mt-4">We are grateful to the organizations whose significant and ongoing support helps make our work possible:</p>
+          </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            {majorSupporters.map((s) => (
+              <span key={s} className="rounded-2xl border-2 border-[var(--color-primary)] bg-[var(--color-tint)] px-8 py-4 text-lg font-semibold text-[var(--color-primary-deep)]">{s}</span>
+            ))}
+          </div>
+
+          <div className="mx-auto mt-20 max-w-2xl text-center">
+            <p className="eyebrow">Community Supporters</p>
+            <p className="soft mt-4">We are grateful to the foundations, businesses, organizations, and individuals who support Claudia House and the young people we serve.</p>
+          </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            {communitySupporters.map((s) => (
               <span key={s} className="rounded-xl border border-[var(--color-line)] px-6 py-3 font-medium text-[var(--color-primary-deep)]">{s}</span>
             ))}
           </div>

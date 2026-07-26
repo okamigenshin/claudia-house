@@ -20,8 +20,17 @@ export default function Team() {
           <div className="grid gap-8 md:grid-cols-2">
             {staff.map((p) => (
               <article key={p.name} className="overflow-hidden rounded-2xl border border-[var(--color-line)] bg-white">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={asset(p.img)} alt={`Portrait of ${p.name}`} className="aspect-[4/3] w-full object-cover" />
+                {p.img ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={asset(p.img)} alt={`Portrait of ${p.name}`} className="aspect-[4/3] w-full object-cover" />
+                ) : (
+                  <div className="flex aspect-[4/3] w-full items-center justify-center bg-[var(--color-tint)] text-[var(--color-primary)]">
+                    <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                      <circle cx="12" cy="8" r="4" />
+                      <path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" />
+                    </svg>
+                  </div>
+                )}
                 <div className="p-7">
                   <h3>{p.name}</h3>
                   <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-[var(--color-accent)]">{p.role}</p>

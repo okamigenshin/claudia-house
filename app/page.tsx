@@ -19,14 +19,15 @@ export default function Home() {
         <div className="wrap grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <p className="eyebrow">Portland, Oregon · 501(c)(3) Nonprofit</p>
-            <h1 className="mt-4">Where youth dream big</h1>
-            <p className="lead mt-6 max-w-lg">
-              Claudia House gives Oregon&rsquo;s young people stable housing, life skills, and holistic
-              support — so they can overcome obstacles and build self-sufficient futures.
+            <h1 className="mt-4">Where Youth Dream Big</h1>
+            <p className="mt-5 font-display text-2xl font-bold text-[var(--color-primary-deep)] md:text-3xl">
+              Building Hope. Inspiring Independence.
+            </p>
+            <p className="lead mt-4 max-w-xl italic">
+              A Residential Independent Living Program for Justice-Involved Young Adults Ages 18&ndash;25.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Link href="/get-involved" className="btn btn-primary">Support a Youth &rarr;</Link>
-              <Link href="/programs" className="btn btn-outline">Make a Referral</Link>
             </div>
           </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -42,11 +43,13 @@ export default function Home() {
       <section className="section bg-[var(--color-tint)]">
         <div className="wrap mx-auto max-w-3xl text-center">
           <p className="eyebrow">Our Mission</p>
-          <h2 className="mt-4">Increasing youth&rsquo;s behavioral, educational, and placement stability</h2>
           <p className="lead mt-6">
-            Named after a social worker and mother who welcomed teens of every background into her home,
-            Claudia House continues her legacy through short-term emergent and longer-term care built on a
-            balance of mind, body, and spirit.
+            Claudia House was inspired by Claudia and Will Kaul, a white couple from Minnesota who built
+            a diverse family by adopting children from South Korea, China, India, and the African American
+            community. Their family reflected the belief that love, belonging, and opportunity should
+            transcend race, culture, and background. Their story inspired Claudia House to embody diversity
+            and inclusion&mdash;a microcosm of the broader community where young people from all backgrounds
+            can feel welcomed, supported, and empowered to build their futures.
           </p>
         </div>
       </section>

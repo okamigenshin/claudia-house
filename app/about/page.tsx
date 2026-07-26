@@ -1,7 +1,6 @@
 import PageBanner from "@/components/PageBanner";
 import CtaBand from "@/components/CtaBand";
-import { commitments } from "@/lib/content";
-import { asset } from "@/lib/config";
+import { aboutStory, commitments } from "@/lib/content";
 
 export const metadata = { title: "About | Claudia House" };
 
@@ -10,22 +9,28 @@ export default function About() {
     <>
       <PageBanner crumb="About" title="Our story & mission" lead="A legacy of welcome, carried forward for a new generation of Oregon's youth." />
 
-      {/* STORY */}
+      {/* STORY — Born from Experience. Built for Possibility. */}
       <section className="section">
-        <div className="wrap grid items-center gap-14 lg:grid-cols-2">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={asset("/images/gallery/gallery-05-living-room-fireplace.jpg")} alt="A warm, furnished living room inside Claudia House" className="aspect-[4/3] w-full rounded-3xl object-cover" />
-          <div>
-            <p className="eyebrow">Who was Claudia?</p>
-            <h2 className="mt-4">Named for a mother who opened her door to every teen</h2>
-            <p className="soft mt-5">
-              Claudia was a social worker and mother who welcomed all teens — of any ethnicity, race, and
-              religion — into her home. She and her spouse adopted three children of diverse backgrounds and
-              gave shelter to many more teenagers during their formative years.
-            </p>
-            <p className="soft mt-4">
-              Claudia House continues that spirit of unconditional welcome as an Oregon nonprofit under
-              Section 501(c)(3), serving educational and charitable purposes.
+        <div className="wrap mx-auto max-w-3xl">
+          <p className="eyebrow">{aboutStory.eyebrow}</p>
+          <h2 className="mt-4">{aboutStory.title}</h2>
+          <p className="soft mt-6">{aboutStory.intro}</p>
+
+          {aboutStory.sections.map((s) => (
+            <div key={s.heading}>
+              <h3 className="mt-12">{s.heading}</h3>
+              {s.paras.map((p, i) => (
+                <p key={i} className="soft mt-4">{p}</p>
+              ))}
+            </div>
+          ))}
+
+          <div className="mt-10 border-t border-[var(--color-line)] pt-8">
+            {aboutStory.closing.map((p, i) => (
+              <p key={i} className="soft mt-4 first:mt-0">{p}</p>
+            ))}
+            <p className="mt-8 font-display text-[1.75rem] font-bold leading-snug text-[var(--color-primary-deep)]">
+              {aboutStory.pullquote}
             </p>
           </div>
         </div>
