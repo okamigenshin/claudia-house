@@ -20,6 +20,13 @@ export const nav = [
   { label: "Contact", href: "/contact" },
 ];
 
+export const missionParagraphs = [
+  "Claudia House was inspired by Claudia and Will Kaul, a white couple from Minnesota who built a diverse family by adopting children from South Korea, China, India, and the African American community. Their family reflected the belief that love, belonging, and opportunity should transcend race, culture, and background. Their story inspired Claudia House to embody diversity and inclusion—a microcosm of the broader community where young people from all backgrounds can feel welcomed, supported, and empowered to build their futures.",
+  "The young people we serve have been involved with Oregon’s justice system to varying degrees and may come from diverse backgrounds and have different histories, identities, beliefs, and needs. We welcome youth from all backgrounds and walks of life, including youth of different races, cultures, ethnicities, national origins, immigration backgrounds, religions or beliefs, gender identities, sexual orientations, abilities, socioeconomic backgrounds, political perspectives, and life experiences.",
+  "As a matter of equity, when considering whom we are best positioned to serve, we give priority to the most vulnerable and disadvantaged members of our communities, considering the totality of their circumstances and needs. This may include immigrants and refugees, who may face additional barriers and have fewer resources when navigating the justice system.",
+  "We do not define a young person solely by their past or circumstances. Our overarching consideration in accepting a youth is whether Claudia House can safely and appropriately meet their identified needs. When we can, we welcome the opportunity to support them with dignity, respect, accountability, and the belief that people can grow, change, and build a better future.",
+];
+
 export const pillars = [
   { icon: "home", title: "Safe Housing", body: "Short- and long-term Residential ILP placements in a warm, supportive home." },
   { icon: "briefcase", title: "Employment", body: "Job readiness, career exploration, and placement support." },
@@ -57,7 +64,7 @@ export const staff = [
   {
     img: "/images/staff/02-kim-hartnagel-program-coordinator.jpg",
     name: "Kim Hartnagel",
-    role: "Program Coordinator",
+    role: "Program Manager",
     bio: "A career in social services with a B.S.W. from Wichita State University, and experience across the Family Support Center, Wichita Children’s Home, and Child Protective Services in Kansas, Oregon, and Washington — centered on youth empowerment through supportive relationships.",
   },
   {
@@ -93,8 +100,8 @@ export const majorSupporters = [
 ];
 
 export const communitySupporters = [
-  "Oregon Youth Authority", "The Home Depot", "Walmart", "Dutch Bros", "Mod Pizza",
-  "Costco", "NW Collision Services", "Ashley Furniture",
+  "The Home Depot", "Walmart", "Dutch Bros", "Mod Pizza", "Costco",
+  "Starbucks Coffee", "NW Collision Services", "Ashley Furniture",
 ];
 
 // Combined list (used by the homepage "In Partnership With" row).

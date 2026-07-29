@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { pillars, gallery, supporters } from "@/lib/content";
+import { pillars, gallery, supporters, missionParagraphs } from "@/lib/content";
 import { asset } from "@/lib/config";
 import Icon, { type IconName } from "@/components/Icon";
 
@@ -42,16 +42,11 @@ export default function Home() {
 
       {/* MISSION */}
       <section className="section bg-[var(--color-tint)]">
-        <div className="wrap mx-auto max-w-3xl text-center">
-          <p className="eyebrow">Our Mission</p>
-          <p className="lead mt-6">
-            Claudia House was inspired by Claudia and Will Kaul, a white couple from Minnesota who built
-            a diverse family by adopting children from South Korea, China, India, and the African American
-            community. Their family reflected the belief that love, belonging, and opportunity should
-            transcend race, culture, and background. Their story inspired Claudia House to embody diversity
-            and inclusion&mdash;a microcosm of the broader community where young people from all backgrounds
-            can feel welcomed, supported, and empowered to build their futures.
-          </p>
+        <div className="wrap mx-auto max-w-3xl">
+          <p className="eyebrow text-center">Our Mission</p>
+          {missionParagraphs.map((p, i) => (
+            <p key={i} className={i === 0 ? "lead mt-6" : "soft mt-5 leading-[1.8]"}>{p}</p>
+          ))}
         </div>
       </section>
 
