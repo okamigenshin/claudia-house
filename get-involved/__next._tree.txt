@@ -1,5 +1,5 @@
-:HL["/claudia-house/_next/static/chunks/0i13zsx1jw60u.css","style"]
+:HL["/claudia-house/_next/static/chunks/0mdfw8flkfn_a.css","style"]
 :HL["/claudia-house/_next/static/media/03bda585a99c6450-s.p.32sris142tqlb.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/claudia-house/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/claudia-house/images/gallery/gallery-17-garden-raised-bed.jpeg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"get-involved","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"PMaAjyK0JFb2xUdLYT1PK"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"get-involved","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"OucS4K2iHeWsm2h110sRz"}
