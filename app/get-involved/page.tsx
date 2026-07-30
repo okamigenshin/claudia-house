@@ -35,7 +35,6 @@ export default function GetInvolved() {
               ))}
             </div>
             <a href="#" className="btn btn-primary w-full justify-center">Donate with PayPal</a>
-            <p className="mt-3 text-sm italic text-[#94a9b1]">PayPal / card donation widget integrates here.</p>
           </div>
         </div>
       </section>
@@ -53,6 +52,14 @@ export default function GetInvolved() {
               donations from Fred Meyer — at no cost to you. Just log in to your rewards account, search
               &ldquo;Claudia House,&rdquo; and link.
             </p>
+            <a
+              href="https://www.fredmeyer.com/topic/community-rewards-4"
+              target="_blank"
+              rel="noopener"
+              className="btn btn-outline btn-sm mt-6"
+            >
+              Link your Rewards Card &rarr;
+            </a>
           </div>
         </div>
       </section>
