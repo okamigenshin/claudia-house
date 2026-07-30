@@ -1,6 +1,6 @@
 import Link from "next/link";
 import PageBanner from "@/components/PageBanner";
-import { jobs, majorSupporters, communitySupporters, site } from "@/lib/content";
+import { jobs, majorSupporters, communitySupporters, supporterLinks, site } from "@/lib/content";
 import { asset } from "@/lib/config";
 import Icon, { type IconName } from "@/components/Icon";
 
@@ -121,9 +121,15 @@ export default function GetInvolved() {
             <p className="soft mt-4">We are grateful to the foundations, businesses, organizations, and individuals who support Claudia House and the young people we serve.</p>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            {communitySupporters.map((s) => (
-              <span key={s} className="rounded-xl border border-[var(--color-line)] px-6 py-3 font-medium text-[var(--color-primary-deep)]">{s}</span>
-            ))}
+            {communitySupporters.map((s) => {
+              const cls = "rounded-xl border border-[var(--color-line)] px-6 py-3 font-medium text-[var(--color-primary-deep)]";
+              const href = supporterLinks[s];
+              return href ? (
+                <a key={s} href={href} target="_blank" rel="noopener" className={`${cls} transition-colors hover:bg-[var(--color-tint)] hover:border-[var(--color-primary)]`}>{s}</a>
+              ) : (
+                <span key={s} className={cls}>{s}</span>
+              );
+            })}
           </div>
         </div>
       </section>

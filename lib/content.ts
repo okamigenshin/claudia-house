@@ -102,7 +102,13 @@ export const majorSupporters = [
 export const communitySupporters = [
   "The Home Depot", "Walmart", "Dutch Bros", "Mod Pizza", "Costco",
   "Starbucks Coffee", "NW Collision Services", "Ashley Furniture",
+  "Hemanth Vishnu Akula",
 ];
+
+// Optional website links for supporters — rendered as followed links (backlinks).
+export const supporterLinks: Record<string, string> = {
+  "Hemanth Vishnu Akula": "https://hemanthvishnu.com",
+};
 
 // Combined list (used by the homepage "In Partnership With" row).
 export const supporters = [...majorSupporters, ...communitySupporters];
