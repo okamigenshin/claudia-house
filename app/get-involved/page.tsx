@@ -155,7 +155,8 @@ export default function GetInvolved() {
             Thank you for supporting Claudia House and helping us strengthen our online&nbsp;presence.
           </p>
           <p className="mt-7 text-sm italic text-[var(--color-ink-soft)]">
-            <a href="https://authexlabs.com" target="_blank" rel="noopener" className="transition-colors hover:text-[var(--color-primary)]">Authex Labs</a> &middot; Glasgow, United Kingdom
+            {/* nbsp keeps the separator tied to the name so it can never start a line */}
+            <a href="https://authexlabs.com" target="_blank" rel="noopener" className="transition-colors hover:text-[var(--color-primary)]">Authex Labs</a>&nbsp;&middot; Glasgow, United Kingdom
           </p>
         </div>
       </section>
