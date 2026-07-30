@@ -9,7 +9,7 @@ export const metadata = { title: "Get Involved | Claudia House" };
 export default function GetInvolved() {
   return (
     <>
-      <PageBanner crumb="Get Involved" title="Join our mission" lead="Give, volunteer, or build a career — every contribution helps a young person become a future leader." />
+      <PageBanner crumb="Get Involved" title="Join our mission" lead="Give, volunteer, or build a career. Every contribution helps a young person become a future leader." />
 
       {/* DONATE */}
       <section className="section">
@@ -18,7 +18,7 @@ export default function GetInvolved() {
             <p className="eyebrow">Make a Donation</p>
             <h2 className="mt-4">Seed a brighter future</h2>
             <p className="soft mt-5">
-              We need seed money to keep building Claudia House — from home remodeling to furnishing. Your
+              We need seed money to keep building Claudia House, from home remodeling to furnishing. Your
               gift helps fight youth homelessness and gives young people the guidance to become
               self-sufficient adults and productive members of society.
             </p>
@@ -41,15 +41,16 @@ export default function GetInvolved() {
 
       {/* FRED MEYER */}
       <section className="section bg-[var(--color-tint)]">
-        <div className="wrap grid items-center gap-14 lg:grid-cols-2">
+        <div className="wrap grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          {/* order flips so the heading leads on mobile, matching the other alternating rows */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={asset("/images/gallery/gallery-17-garden-raised-bed.jpeg")} alt="Raised garden bed at Claudia House" className="aspect-[16/10] w-full rounded-3xl object-cover" />
-          <div>
+          <img src={asset("/images/gallery/gallery-17-garden-raised-bed.jpeg")} alt="Raised garden bed at Claudia House" loading="lazy" className="order-2 aspect-[16/10] w-full rounded-3xl object-cover lg:order-1" />
+          <div className="order-1 lg:order-2">
             <p className="eyebrow">When You Shop, You Give</p>
             <h2 className="mt-4">Fred Meyer Community Rewards</h2>
             <p className="soft mt-5">
               Link your Rewards Card to Claudia House (code <strong>PQ447</strong>) and we receive quarterly
-              donations from Fred Meyer — at no cost to you. Just log in to your rewards account, search
+              donations from Fred Meyer, at no cost to you. Just log in to your rewards account, search
               &ldquo;Claudia House,&rdquo; and link.
             </p>
             <a
@@ -72,7 +73,7 @@ export default function GetInvolved() {
             <h2 className="mt-4">Share your time &amp; talent</h2>
             <p className="soft mt-4">We&rsquo;re building a pool of drivers, mentors, and professionals who can contribute skills and time to youth learning and development.</p>
           </div>
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { icon: "userPlus", t: "Mentor", b: "Be a steady, encouraging presence for a young person." },
               { icon: "car", t: "Drive", b: "Help youth get to school, work, appointments, and outings." },
@@ -138,6 +139,24 @@ export default function GetInvolved() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* WEBSITE ACKNOWLEDGMENT */}
+      <section className="border-t border-[var(--color-line)] py-24">
+        <div className="wrap mx-auto max-w-4xl text-center">
+          <p className="eyebrow">Website Acknowledgment</p>
+          <p className="soft mt-5 text-balance leading-[1.8]">
+            This website was designed, developed, and secured through the generous donation of time and expertise from{" "}
+            <a href="https://hemanthvishnu.com" target="_blank" rel="noopener" className="font-semibold text-[var(--color-primary-deep)] underline decoration-[var(--color-line)] underline-offset-4 hover:decoration-[var(--color-primary)]">Hemanth Vishnu Akula</a>, Founder &amp; CEO at{" "}
+            <a href="https://authexlabs.com" target="_blank" rel="noopener" className="font-semibold text-[var(--color-primary-deep)] underline decoration-[var(--color-line)] underline-offset-4 hover:decoration-[var(--color-primary)]">Authex Labs</a>.
+          </p>
+          <p className="soft mt-4 text-balance leading-[1.8]">
+            Thank you for supporting Claudia House and helping us strengthen our online&nbsp;presence.
+          </p>
+          <p className="mt-7 text-sm italic text-[var(--color-ink-soft)]">
+            <a href="https://authexlabs.com" target="_blank" rel="noopener" className="transition-colors hover:text-[var(--color-primary)]">Authex Labs</a> &middot; Glasgow, United Kingdom
+          </p>
         </div>
       </section>
     </>

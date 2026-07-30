@@ -20,8 +20,12 @@ export const nav = [
   { label: "Contact", href: "/contact" },
 ];
 
+// Short mission statement (homepage "Our Mission" subtitle).
+export const missionStatement =
+  "Claudia House empowers justice-involved young adults ages 18–25 through safe housing, life skills, education, employment support, and compassionate guidance so they can build independent and meaningful futures.";
+
 export const missionParagraphs = [
-  "Claudia House was inspired by Claudia and Will Kaul, a white couple from Minnesota who built a diverse family by adopting children from South Korea, China, India, and the African American community. Their family reflected the belief that love, belonging, and opportunity should transcend race, culture, and background. Their story inspired Claudia House to embody diversity and inclusion—a microcosm of the broader community where young people from all backgrounds can feel welcomed, supported, and empowered to build their futures.",
+  "Claudia House was inspired by Claudia and Will Kaul, a white couple from Minnesota who built a diverse family by adopting children from South Korea, China, India, and the African American community. Their family reflected the belief that love, belonging, and opportunity should transcend race, culture, and background. Their story inspired Claudia House to embody diversity and inclusion, a microcosm of the broader community where young people from all backgrounds can feel welcomed, supported, and empowered to build their futures.",
   "The young people we serve have been involved with Oregon’s justice system to varying degrees and may come from diverse backgrounds and have different histories, identities, beliefs, and needs. We welcome youth from all backgrounds and walks of life, including youth of different races, cultures, ethnicities, national origins, immigration backgrounds, religions or beliefs, gender identities, sexual orientations, abilities, socioeconomic backgrounds, political perspectives, and life experiences.",
   "As a matter of equity, when considering whom we are best positioned to serve, we give priority to the most vulnerable and disadvantaged members of our communities, considering the totality of their circumstances and needs. This may include immigrants and refugees, who may face additional barriers and have fewer resources when navigating the justice system.",
   "We do not define a young person solely by their past or circumstances. Our overarching consideration in accepting a youth is whether Claudia House can safely and appropriately meet their identified needs. When we can, we welcome the opportunity to support them with dignity, respect, accountability, and the belief that people can grow, change, and build a better future.",
@@ -65,7 +69,7 @@ export const staff = [
     img: "/images/staff/02-kim-hartnagel-program-coordinator.jpg",
     name: "Kim Hartnagel",
     role: "Program Manager",
-    bio: "A career in social services with a B.S.W. from Wichita State University, and experience across the Family Support Center, Wichita Children’s Home, and Child Protective Services in Kansas, Oregon, and Washington — centered on youth empowerment through supportive relationships.",
+    bio: "A career in social services with a B.S.W. from Wichita State University, and experience across the Family Support Center, Wichita Children’s Home, and Child Protective Services in Kansas, Oregon, and Washington, centered on youth empowerment through supportive relationships.",
   },
   {
     img: "",
@@ -102,13 +106,10 @@ export const majorSupporters = [
 export const communitySupporters = [
   "The Home Depot", "Walmart", "Dutch Bros", "Mod Pizza", "Costco",
   "Starbucks Coffee", "NW Collision Services", "Ashley Furniture",
-  "Hemanth Vishnu Akula",
 ];
 
 // Optional website links for supporters — rendered as followed links (backlinks).
-export const supporterLinks: Record<string, string> = {
-  "Hemanth Vishnu Akula": "https://hemanthvishnu.com",
-};
+export const supporterLinks: Record<string, string> = {};
 
 // Combined list (used by the homepage "In Partnership With" row).
 export const supporters = [...majorSupporters, ...communitySupporters];
@@ -123,9 +124,9 @@ export const aboutStory = {
     {
       heading: "1. Young People Are More Than Their Past",
       paras: [
-        "The founders witnessed young people experience trauma, neglect, abuse, exploitation, and instability—and often become defined by what happened to them, the circumstances that brought them into care or custody, or the harm they may have caused others.",
+        "The founders witnessed young people experience trauma, neglect, abuse, exploitation, and instability, and often become defined by what happened to them, the circumstances that brought them into care or custody, or the harm they may have caused others.",
         "Yet when asked questions like, “Who do you want to be?” or “What do you want to do with your life?” they often saw something different: smiles, excitement, and hope.",
-        "Young people wanted the opportunity to imagine who they could become—not simply to revisit where they had been.",
+        "Young people wanted the opportunity to imagine who they could become, not simply to revisit where they had been.",
       ],
     },
     {
@@ -133,7 +134,7 @@ export const aboutStory = {
       paras: [
         "The founders also saw that, despite their experiences and circumstances, young people wanted what everyone wants: to be treated with respect, care, attention, and dignity.",
         "They valued the simple but meaningful experiences that communicate, “You matter.” A warm meal. A shared dinner. A holiday gift. A clean and welcoming space. Someone taking the time to listen. The feeling of being included, remembered, and cared for.",
-        "These experiences showed the founders that young people did not want to be treated as their case file, their history, or their mistakes. They wanted to be treated as people—as equals who deserved respect, kindness, and the opportunity to belong.",
+        "These experiences showed the founders that young people did not want to be treated as their case file, their history, or their mistakes. They wanted to be treated as people, as equals who deserved respect, kindness, and the opportunity to belong.",
       ],
     },
     {
@@ -148,7 +149,7 @@ export const aboutStory = {
   ],
   closing: [
     "From these three experiences, Claudia House was created: a home, not an institution; a place where young people are treated as equals, encouraged to look toward the future, and given the space to dream, hope, and thrive.",
-    "Because a young person should not be defined solely by what happened to them—or by the worst things they may have done.",
+    "Because a young person should not be defined solely by what happened to them, or by the worst things they may have done.",
   ],
   pullquote: "Safety is the minimum. Possibility is the goal.",
 };

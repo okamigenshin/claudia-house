@@ -70,14 +70,14 @@ export default function Gallery() {
           onClick={() => setLightbox(null)}
         >
           <button
-            className="absolute top-5 right-6 text-4xl text-white"
+            className="absolute top-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-black/40 text-3xl leading-none text-white backdrop-blur-sm transition-colors hover:bg-black/60 sm:top-5 sm:right-6"
             aria-label="Close"
             onClick={() => setLightbox(null)}
           >
             &times;
           </button>
           <button
-            className="absolute left-4 text-5xl text-white/80 hover:text-white"
+            className="absolute left-2 flex h-11 w-11 items-center justify-center rounded-full bg-black/40 text-3xl leading-none text-white backdrop-blur-sm transition-colors hover:bg-black/60 sm:left-4 sm:h-14 sm:w-14 sm:text-4xl"
             aria-label="Previous"
             onClick={(e) => { e.stopPropagation(); setLightbox((lightbox - 1 + items.length) % items.length); }}
           >
@@ -85,11 +85,11 @@ export default function Gallery() {
           </button>
           <figure className="max-h-[88vh] max-w-5xl" onClick={(e) => e.stopPropagation()}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={asset(items[lightbox].src)} alt={items[lightbox].alt} className="max-h-[80vh] w-auto rounded-lg" />
+            <img src={asset(items[lightbox].src)} alt={items[lightbox].alt} className="max-h-[80vh] w-auto rounded-2xl" />
             <figcaption className="mt-3 text-center text-white/80">{items[lightbox].alt}</figcaption>
           </figure>
           <button
-            className="absolute right-4 text-5xl text-white/80 hover:text-white"
+            className="absolute right-2 flex h-11 w-11 items-center justify-center rounded-full bg-black/40 text-3xl leading-none text-white backdrop-blur-sm transition-colors hover:bg-black/60 sm:right-4 sm:h-14 sm:w-14 sm:text-4xl"
             aria-label="Next"
             onClick={(e) => { e.stopPropagation(); setLightbox((lightbox + 1) % items.length); }}
           >

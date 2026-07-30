@@ -7,7 +7,7 @@ export const metadata = { title: "Gallery | Claudia House" };
 export default function GalleryPage() {
   return (
     <>
-      <PageBanner crumb="Gallery" title="Step inside our home" lead="Warm bedrooms, shared living spaces, a garden, and walls full of encouragement — a real home where youth feel they belong." />
+      <PageBanner crumb="Gallery" title="Step inside our home" lead="Warm bedrooms, shared living spaces, a garden, and walls full of encouragement. A real home where youth feel they belong." />
       <section className="section pt-16">
         <div className="wrap">
           <Gallery />

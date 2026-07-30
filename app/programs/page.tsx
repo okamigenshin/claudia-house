@@ -6,7 +6,7 @@ import { asset } from "@/lib/config";
 export const metadata = { title: "Programs | Claudia House" };
 
 const stages = [
-  { n: "Stage 01", t: "Pre-Placement", b: "Youth build trust with staff before placement — creating connections that lay the foundation for a successful transition." },
+  { n: "Stage 01", t: "Pre-Placement", b: "Youth build trust with staff before placement, creating connections that lay the foundation for a successful transition." },
   { n: "Stage 02", t: "In-House Support", b: "Life skills, mentorship, education, and career readiness inside a warm, structured home.", feature: true },
   { n: "Stage 03", t: "Off-Site Services", b: "Expanded care: medical & dental, counseling, psychiatric care, and arts & hobby programs." },
 ];
@@ -14,11 +14,11 @@ const stages = [
 export default function Programs() {
   return (
     <>
-      <PageBanner crumb="Programs" title="Pathways to ILP" lead="Helping youth thrive with independent-living skills — before, during, and beyond their stay." />
+      <PageBanner crumb="Programs" title="Pathways to ILP" lead="Helping youth thrive with independent-living skills: before, during, and beyond their stay." />
 
       {/* STAGES */}
       <section className="section">
-        <div className="wrap grid gap-6 lg:grid-cols-3">
+        <div className="wrap grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {stages.map((s) => (
             <div key={s.t} className={`card ${s.feature ? "border-2 border-[var(--color-primary)]" : ""}`}>
               <p className="eyebrow">{s.n}</p>
@@ -49,7 +49,7 @@ export default function Programs() {
 
       {/* EDUCATION */}
       <section className="section">
-        <div className="wrap grid items-center gap-14 lg:grid-cols-2">
+        <div className="wrap grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <div>
             <p className="eyebrow">Education Opportunities</p>
             <h2 className="mt-4">Real schools, colleges &amp; trades</h2>
@@ -64,7 +64,7 @@ export default function Programs() {
             </p>
           </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={asset("/images/gallery/gallery-07-inspirational-posters-wall.jpg")} alt="A wall of inspirational posters inside the home" className="aspect-[4/3] w-full rounded-3xl object-cover" />
+          <img src={asset("/images/gallery/gallery-07-inspirational-posters-wall.jpg")} alt="A wall of inspirational posters inside the home" loading="lazy" className="aspect-[4/3] w-full rounded-3xl object-cover" />
         </div>
       </section>
 

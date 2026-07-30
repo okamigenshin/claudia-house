@@ -18,7 +18,8 @@
 
 /* ---- Base ---- */
 @layer base {
-  html { scroll-behavior: smooth; }
+  /* scroll-padding keeps anchor targets clear of the 84px sticky header */
+  html { scroll-behavior: smooth; scroll-padding-top: 6.25rem; }
   body {
     background: #fff;
     color: var(--color-ink);
@@ -27,7 +28,14 @@
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 { color: var(--color-primary-deep); font-family: var(--font-display), Georgia, serif; }
+  /* balance evens out the line lengths so a heading never drops a single
+     orphaned word onto its own line */
+  h1, h2, h3, h4 {
+    color: var(--color-primary-deep); font-family: var(--font-display), Georgia, serif;
+    text-wrap: balance;
+  }
+  /* pretty does the same job for running text, without balancing every line */
+  p { text-wrap: pretty; }
   h1 { font-weight: 900; font-size: clamp(2.6rem, 5.5vw, 4.75rem); line-height: 1.04; letter-spacing: -0.02em; }
   h2 { font-weight: 700; font-size: clamp(2rem, 3.6vw, 2.85rem); line-height: 1.1; letter-spacing: -0.015em; }
   h3 { font-weight: 700; font-size: 1.5rem; line-height: 1.2; }
@@ -45,7 +53,14 @@
     text-transform: uppercase; color: var(--color-primary);
   }
   .lead { font-size: clamp(1.2rem, 1.6vw, 1.4rem); line-height: 1.5; color: var(--color-ink-soft); }
-  .soft { color: var(--color-ink-soft); font-size: 1.0625rem; }
+  /* scales with the body copy instead of shrinking against it on wide screens */
+  .soft { color: var(--color-ink-soft); font-size: clamp(1.0625rem, 1rem + 0.22vw, 1.125rem); }
+  /* shared sub-headline under a page/section title (was duplicated inline) */
+  .deck {
+    font-family: var(--font-display), Georgia, serif; font-weight: 700;
+    font-size: clamp(1.5rem, 2.4vw, 1.875rem); line-height: 1.25;
+    color: var(--color-primary-deep); text-wrap: balance;
+  }
 
   .btn {
     display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer;

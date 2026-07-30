@@ -11,7 +11,7 @@ export default function Footer() {
               CLAUDIA<span className="text-[#5fd3e8]">HOUSE</span>
             </div>
             <p className="mt-4 max-w-xs text-[#aecfd8]">
-              A safe home and a fresh start for Oregon&rsquo;s youth. Building future leaders &mdash; mind, body, and spirit.
+              A safe home and a fresh start for Oregon&rsquo;s youth. Building future leaders: mind, body, and spirit.
             </p>
           </div>
 

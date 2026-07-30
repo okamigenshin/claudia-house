@@ -8,7 +8,7 @@ export const metadata = { title: "Our Team | Claudia House" };
 export default function Team() {
   return (
     <>
-      <PageBanner crumb="Our Team" title="Meet our team" lead="Decades of social work, child welfare, and community service — in service of every young person who walks through our door." />
+      <PageBanner crumb="Our Team" title="Meet our team" lead="Decades of social work, child welfare, and community service. In service of every young person who walks through our door." />
 
       {/* STAFF */}
       <section className="section">
@@ -21,14 +21,19 @@ export default function Team() {
             {staff.map((p) => (
               <article key={p.name} className="overflow-hidden rounded-2xl border border-[var(--color-line)] bg-white">
                 {p.img ? (
+                  // Portrait box + upper-third focal point: the source photos are all tall,
+                  // so a landscape crop cut off heads.
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={asset(p.img)} alt={`Portrait of ${p.name}`} className="aspect-[4/3] w-full object-cover" />
+                  <img src={asset(p.img)} alt={`Portrait of ${p.name}`} loading="lazy" className="aspect-[4/5] w-full object-cover object-[50%_25%]" />
                 ) : (
-                  <div className="flex aspect-[4/3] w-full items-center justify-center bg-[var(--color-tint)] text-[var(--color-primary)]">
-                    <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-                      <circle cx="12" cy="8" r="4" />
-                      <path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" />
-                    </svg>
+                  // Shorter box than a real portrait: a 4/5 void reads as a missing image.
+                  <div className="flex aspect-[3/2] w-full items-center justify-center bg-[var(--color-tint)]">
+                    <span className="flex h-20 w-20 items-center justify-center rounded-full bg-white/70 text-[var(--color-primary)]">
+                      <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                        <circle cx="12" cy="8" r="4" />
+                        <path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" />
+                      </svg>
+                    </span>
                   </div>
                 )}
                 <div className="p-7">
@@ -53,7 +58,7 @@ export default function Team() {
             {board.map((p) => (
               <article key={p.name} className="overflow-hidden rounded-2xl border border-[var(--color-line)] bg-white">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={asset(p.img)} alt={`Portrait of ${p.name}`} className="aspect-square w-full object-cover" />
+                <img src={asset(p.img)} alt={`Portrait of ${p.name}`} loading="lazy" className="aspect-square w-full object-cover object-[50%_22%]" />
                 <div className="p-6">
                   <h3 className="text-[1.3rem]">{p.name}</h3>
                   <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-[var(--color-accent)]">{p.role}</p>

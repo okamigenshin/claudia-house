@@ -7,7 +7,7 @@ export const metadata = { title: "Contact | Claudia House" };
 export default function Contact() {
   return (
     <>
-      <PageBanner crumb="Contact" title="Get in touch" lead="Questions, referrals, volunteering, or partnership — we'd love to hear from you." />
+      <PageBanner crumb="Contact" title="Get in touch" lead="Questions, referrals, volunteering, or partnership. We'd love to hear from you." />
 
       <section className="section">
         <div className="wrap grid gap-16 lg:grid-cols-2">
@@ -65,10 +65,10 @@ export default function Contact() {
         <div className="wrap mx-auto max-w-xl text-center">
           <p className="eyebrow">Stay Connected</p>
           <h2 className="mt-4">Subscribe for updates</h2>
-          <p className="soft mt-4">News, events, and ways to help — straight to your inbox.</p>
-          <form className="mx-auto mt-7 flex max-w-md gap-3">
+          <p className="soft mt-4">News, events, and ways to help, straight to your inbox.</p>
+          <form className="mx-auto mt-7 flex max-w-md flex-col gap-3 sm:flex-row">
             <input type="email" placeholder="Your email" aria-label="Email" className="flex-1 rounded-full border border-[var(--color-line)] bg-white px-5 py-3.5 text-[1.0625rem]" />
-            <button type="submit" className="btn btn-primary">Subscribe</button>
+            <button type="submit" className="btn btn-primary justify-center">Subscribe</button>
           </form>
         </div>
       </section>

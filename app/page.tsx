@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { pillars, gallery, supporters, missionParagraphs } from "@/lib/content";
+import { pillars, gallery, supporters, missionParagraphs, missionStatement } from "@/lib/content";
 import { asset } from "@/lib/config";
 import Icon, { type IconName } from "@/components/Icon";
 
@@ -17,13 +17,11 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="section pt-20">
-        <div className="wrap grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="wrap grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <p className="eyebrow">Portland, Oregon · 501(c)(3) Nonprofit</p>
             <h1 className="mt-4">Where Youth Dream Big</h1>
-            <p className="mt-5 font-display text-2xl font-bold text-[var(--color-primary-deep)] md:text-3xl">
-              Building Hope. Inspiring Independence.
-            </p>
+            <p className="deck mt-5">Building Hope. Inspiring Independence.</p>
             <p className="lead mt-4 max-w-xl italic">
               A Residential Independent Living Program for Justice-Involved Young Adults Ages 18&ndash;25.
             </p>
@@ -40,12 +38,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* MISSION */}
+      {/* WHO WE ARE */}
       <section className="section bg-[var(--color-tint)]">
-        <div className="wrap mx-auto max-w-3xl">
-          <p className="eyebrow text-center">Our Mission</p>
+        <div className="wrap mx-auto max-w-4xl">
+          <h2 className="text-center">Who We Are</h2>
+
+          <h3 className="mt-11 text-center text-[1.6rem]">Our Mission</h3>
+          <p className="lead mt-4 text-balance text-center italic text-[var(--color-primary-deep)]">
+            {missionStatement}
+          </p>
+
+          <h3 className="mt-16 text-center text-[1.6rem]">Our Inspiration</h3>
           {missionParagraphs.map((p, i) => (
-            <p key={i} className={i === 0 ? "lead mt-6" : "soft mt-5 leading-[1.8]"}>{p}</p>
+            <p key={i} className="soft mt-5 leading-[1.8]">{p}</p>
           ))}
         </div>
       </section>
@@ -55,7 +60,7 @@ export default function Home() {
         <div className="wrap grid gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((s) => (
             <div key={s.l}>
-              <div className="font-display text-[3.5rem] font-black leading-none text-[var(--color-primary)]">{s.n}</div>
+              <div className="font-display text-[clamp(2.75rem,5vw,3.5rem)] font-black leading-none text-[var(--color-primary)]">{s.n}</div>
               <p className="soft mt-2">{s.l}</p>
             </div>
           ))}
@@ -87,12 +92,12 @@ export default function Home() {
       {/* GALLERY PREVIEW */}
       <section className="section">
         <div className="wrap">
-          <div className="mb-14 grid items-center gap-14 lg:grid-cols-2">
+          <div className="mb-14 grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
             <div>
               <p className="eyebrow">A Real Home</p>
               <h2 className="mt-4">Step inside Claudia House</h2>
               <p className="lead mt-5">
-                Comfortable bedrooms, shared living spaces, a garden, and walls full of encouragement —
+                Comfortable bedrooms, shared living spaces, a garden, and walls full of encouragement,
                 designed so every young person feels they belong.
               </p>
               <Link href="/gallery" className="btn btn-outline mt-7">View the gallery &rarr;</Link>
@@ -101,13 +106,14 @@ export default function Home() {
             <img
               src={asset("/images/shared/banner-claudia.jpg")}
               alt="The welcoming front porch of Claudia House"
+              loading="lazy"
               className="aspect-[16/10] w-full rounded-3xl object-cover"
             />
           </div>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
             {homeGallery.map((img) => (
               // eslint-disable-next-line @next/next/no-img-element
-              <img key={img.src} src={asset(img.src)} alt={img.alt} className="aspect-[4/3] w-full rounded-2xl object-cover" />
+              <img key={img.src} src={asset(img.src)} alt={img.alt} loading="lazy" className="aspect-[4/3] w-full rounded-2xl object-cover" />
             ))}
           </div>
         </div>
@@ -117,7 +123,7 @@ export default function Home() {
       <section className="section bg-[var(--color-tint)]">
         <div className="wrap mx-auto max-w-4xl text-center">
           <p className="font-display text-[clamp(1.75rem,3.4vw,2.6rem)] font-bold leading-snug text-[var(--color-primary-deep)]">
-            &ldquo;Do not apologize for who you are or where you are in life — just set your sights high.&rdquo;
+            &ldquo;Do not apologize for who you are or where you are in life. Just set your sights high.&rdquo;
           </p>
         </div>
       </section>
@@ -129,11 +135,11 @@ export default function Home() {
             <p className="eyebrow">Get Involved</p>
             <h2 className="mt-4">Help a young person build their future</h2>
           </div>
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { icon: "heart", t: "Donate", b: "Seed our home — from remodeling to furnishings. Tax-deductible 501(c)(3).", c: "Give Now", primary: true },
+              { icon: "heart", t: "Donate", b: "Seed our home, from remodeling to furnishings. Tax-deductible 501(c)(3).", c: "Give Now", primary: true },
               { icon: "handHeart", t: "Volunteer", b: "Mentor, drive, or share a professional skill with our youth.", c: "Join Us" },
-              { icon: "briefcase", t: "Careers", b: "Case Managers & Direct Care staff — do meaningful work.", c: "See Roles" },
+              { icon: "briefcase", t: "Careers", b: "Case Managers & Direct Care staff. Do meaningful work.", c: "See Roles" },
             ].map((x) => (
               <div key={x.t} className="card">
                 <div className="card-ic"><Icon name={x.icon as IconName} /></div>

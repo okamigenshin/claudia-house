@@ -1,4 +1,3 @@
-import PageBanner from "@/components/PageBanner";
 import CtaBand from "@/components/CtaBand";
 import Icon from "@/components/Icon";
 import { aboutStory, commitments } from "@/lib/content";
@@ -8,13 +7,11 @@ export const metadata = { title: "About | Claudia House" };
 export default function About() {
   return (
     <>
-      <PageBanner crumb="About" title="Our story & mission" lead="A legacy of welcome, carried forward for a new generation of Oregon's youth." />
-
-      {/* STORY — Born from Experience. Built for Possibility. */}
-      <section className="section">
-        <div className="wrap mx-auto max-w-3xl">
-          <p className="eyebrow">{aboutStory.eyebrow}</p>
-          <h2 className="mt-4">{aboutStory.title}</h2>
+      {/* STORY: Our Story / Born from Experience. Built for Possibility. */}
+      <section className="section pt-20">
+        <div className="wrap mx-auto max-w-4xl">
+          <h1>{aboutStory.eyebrow}</h1>
+          <p className="deck mt-4">{aboutStory.title}</p>
           <p className="soft mt-6">{aboutStory.intro}</p>
 
           {aboutStory.sections.map((s, si) => {
@@ -42,7 +39,7 @@ export default function About() {
             ))}
           </div>
 
-          <div className="mt-10 rounded-2xl border-l-4 border-[var(--color-accent)] bg-[var(--color-tint)] px-8 py-7">
+          <div className="mt-10 rounded-r-2xl border-l-4 border-[var(--color-accent)] bg-[var(--color-tint)] px-8 py-7">
             <p className="font-display text-[1.6rem] font-bold leading-snug text-[var(--color-primary-deep)]">
               {aboutStory.pullquote}
             </p>
@@ -61,7 +58,7 @@ export default function About() {
           <div className="card p-12">
             <p className="eyebrow">Vision</p>
             <h3 className="mt-3 text-[1.75rem]">Mind, body &amp; spirit</h3>
-            <p className="soft mt-3">Balanced growth across mental, physical, and spiritual dimensions — helping young people overcome obstacles and succeed.</p>
+            <p className="soft mt-3">Balanced growth across mental, physical, and spiritual dimensions, helping young people overcome obstacles and succeed.</p>
           </div>
         </div>
       </section>
