@@ -99,11 +99,11 @@ export default function GetInvolved() {
           </div>
           <div className="grid gap-8 md:grid-cols-2">
             {jobs.map((j) => (
-              <div key={j.title} className="card p-10">
+              <div key={j.title} className="card flex flex-col p-10">
                 <h3>{j.title}</h3>
                 <p className="mt-1.5 text-sm font-semibold uppercase tracking-wider text-[var(--color-accent)]">{j.meta}</p>
-                <p className="soft mt-4">{j.body}</p>
-                <a href={`mailto:${site.careersEmail}`} className="btn btn-outline btn-sm mt-5">Apply by email</a>
+                <p className="soft mt-4 mb-5">{j.body}</p>
+                <a href={`mailto:${site.careersEmail}`} className="btn btn-outline btn-sm mt-auto self-start">Apply by email</a>
               </div>
             ))}
           </div>

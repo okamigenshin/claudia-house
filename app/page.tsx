@@ -141,11 +141,13 @@ export default function Home() {
               { icon: "handHeart", t: "Volunteer", b: "Mentor, drive, or share a professional skill with our youth.", c: "Join Us" },
               { icon: "briefcase", t: "Careers", b: "Case Managers & Direct Care staff. Do meaningful work.", c: "See Roles" },
             ].map((x) => (
-              <div key={x.t} className="card">
+              // flex column + mt-auto pins every CTA to the card bottom, so
+              // uneven body copy doesn't leave the buttons on different baselines
+              <div key={x.t} className="card flex flex-col">
                 <div className="card-ic"><Icon name={x.icon as IconName} /></div>
                 <h3>{x.t}</h3>
-                <p className="soft mt-2">{x.b}</p>
-                <Link href="/get-involved" className={`btn btn-sm mt-5 ${x.primary ? "btn-primary" : "btn-outline"}`}>{x.c}</Link>
+                <p className="soft mt-2 mb-5">{x.b}</p>
+                <Link href="/get-involved" className={`btn btn-sm mt-auto self-start ${x.primary ? "btn-primary" : "btn-outline"}`}>{x.c}</Link>
               </div>
             ))}
           </div>
