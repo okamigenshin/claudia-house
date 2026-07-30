@@ -36,11 +36,13 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 text-xl text-white">Stay Updated</h3>
             <form className="flex flex-col gap-3">
+              {/* bg-white is required: Tailwind's preflight resets inputs to a
+                  transparent background, which left dark text on the dark footer */}
               <input
                 type="email"
                 placeholder="Your email"
                 aria-label="Email address"
-                className="rounded-[10px] px-4 py-3 text-[var(--color-ink)]"
+                className="rounded-[10px] bg-white px-4 py-3 text-[var(--color-ink)] placeholder:text-[var(--color-ink-soft)]"
               />
               <button type="submit" className="btn btn-primary w-full justify-center">Subscribe</button>
             </form>
