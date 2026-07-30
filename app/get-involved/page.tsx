@@ -148,7 +148,7 @@ export default function GetInvolved() {
           <p className="eyebrow">Website Acknowledgment</p>
           <p className="soft mt-5 text-balance leading-[1.8]">
             This website was designed, developed, and secured through the generous donation of time and expertise from{" "}
-            <a href="https://hemanthvishnu.com" target="_blank" rel="noopener" className="font-semibold text-[var(--color-primary-deep)] underline decoration-[var(--color-line)] underline-offset-4 hover:decoration-[var(--color-primary)]">Hemanth Vishnu Akula</a>, Founder &amp; CEO at{" "}
+            <a href="https://hemanthvishnu.com" target="_blank" rel="noopener" className="font-semibold text-[var(--color-primary-deep)] underline decoration-[var(--color-line)] underline-offset-4 hover:decoration-[var(--color-primary)]">Hemanth Vishnu Akula</a>, Founder at{" "}
             <a href="https://authexlabs.com" target="_blank" rel="noopener" className="font-semibold text-[var(--color-primary-deep)] underline decoration-[var(--color-line)] underline-offset-4 hover:decoration-[var(--color-primary)]">Authex Labs</a>.
           </p>
           <p className="soft mt-4 text-balance leading-[1.8]">
