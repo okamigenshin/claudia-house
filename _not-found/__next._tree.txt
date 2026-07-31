@@ -1,2 +1,2 @@
-:HL["/claudia-house/_next/static/chunks/3btx83h9du-ci.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"9_ND_ZIebZmtWa_QUHMId"}
+:HL["/claudia-house/_next/static/chunks/32v-dtdb3qyqu.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"fRmLnjaQ14TA5YOWobMkB"}
