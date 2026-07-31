@@ -40,12 +40,19 @@ export default function GetInvolved() {
           </div>
           <div className="card bg-[var(--color-tint)] p-10">
             <h3>Give today</h3>
-            <div className="my-5 flex flex-wrap gap-2.5">
-              {["$25", "$50", "$100", "$250", "Other"].map((a, i) => (
-                <span key={a} className={`rounded-full border px-5 py-2.5 text-[15px] font-medium ${i === 1 ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white" : "border-[var(--color-line)] text-[var(--color-ink-soft)]"}`}>{a}</span>
-              ))}
-            </div>
-            <a href="#" className="btn btn-primary w-full justify-center">Donate with PayPal</a>
+            {/* The amount chips that used to sit here were inert <span>s — they
+                looked selectable but did nothing. Amount selection is handled on
+                PayPal's own page, configured via the hosted button. */}
+            <p className="soft mt-3">Donations are processed securely by PayPal.</p>
+            <a
+              href={site.donateUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary mt-6 w-full justify-center"
+            >
+              Donate with PayPal
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
           </div>
         </div>
       </section>

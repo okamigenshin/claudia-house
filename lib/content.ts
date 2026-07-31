@@ -8,6 +8,10 @@ export const site = {
   phoneHref: "tel:5033790116",
   email: "info@claudiahouse.com",
   careersEmail: "staff@claudiahouse.com",
+  // PayPal hosted donate button. Used as a plain link rather than PayPal's
+  // donate-sdk.js so the site ships no third-party JavaScript and the button
+  // keeps the site's own styling instead of PayPal's GIF.
+  donateUrl: "https://www.paypal.com/donate/?hosted_button_id=AMPRW39ES8CR8",
 };
 
 export const nav = [
