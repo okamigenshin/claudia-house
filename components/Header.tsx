@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { nav } from "@/lib/content";
 
 export default function Header() {
@@ -10,6 +10,14 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+  // Escape closes the mobile menu, matching the lightbox's behaviour
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(false); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--color-line)] bg-white/90 backdrop-blur">
@@ -19,11 +27,12 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
+              aria-current={isActive(item.href) ? "page" : undefined}
               className={`text-base font-medium transition-colors hover:text-[var(--color-primary)] ${
                 isActive(item.href) ? "text-[var(--color-primary)]" : "text-[var(--color-ink)]"
               }`}
@@ -36,12 +45,12 @@ export default function Header() {
 
         {/* Mobile toggle */}
         <button
-          className="lg:hidden text-[var(--color-primary-deep)]"
+          className="-mr-2 p-2 lg:hidden text-[var(--color-primary-deep)]"
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
             {open ? <path d="M18 6 6 18M6 6l12 12" /> : <path d="M3 6h18M3 12h18M3 18h18" />}
           </svg>
         </button>
@@ -49,12 +58,13 @@ export default function Header() {
 
       {/* Mobile menu */}
       {open && (
-        <nav className="lg:hidden border-t border-[var(--color-line)] bg-white px-6 py-4">
+        <nav aria-label="Mobile" className="lg:hidden border-t border-[var(--color-line)] bg-white px-6 py-4">
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
+              aria-current={isActive(item.href) ? "page" : undefined}
               className={`block py-3 text-lg font-medium ${
                 isActive(item.href) ? "text-[var(--color-primary)]" : "text-[var(--color-ink)]"
               }`}

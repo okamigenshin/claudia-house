@@ -42,6 +42,7 @@ export default function Footer() {
                 type="email"
                 placeholder="Your email"
                 aria-label="Email address"
+                autoComplete="email"
                 className="rounded-[10px] bg-white px-4 py-3 text-[var(--color-ink)] placeholder:text-[var(--color-ink-soft)]"
               />
               <button type="submit" className="btn btn-primary w-full justify-center">Subscribe</button>
@@ -58,7 +59,7 @@ export default function Footer() {
           <a
             href="https://authexlabs.com"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-[#9fc7d2] transition-colors hover:text-white"
           >
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" aria-hidden="true">

@@ -3,12 +3,23 @@ import CtaBand from "@/components/CtaBand";
 import { staff, board } from "@/lib/content";
 import { asset } from "@/lib/config";
 
-export const metadata = { title: "Our Team | Claudia House" };
+export const metadata = {
+  title: "Our Team",
+  description:
+    "Meet the staff and board of Claudia House, bringing decades of social work, child welfare and community service to Portland's justice-involved young adults.",
+  alternates: { canonical: "/team/" },
+  openGraph: {
+    title: "Our Team | Claudia House",
+    description:
+      "Meet the staff and board of Claudia House, bringing decades of social work, child welfare and community service to Portland's justice-involved young adults.",
+    url: "/team/",
+  },
+};
 
 export default function Team() {
   return (
     <>
-      <PageBanner crumb="Our Team" title="Meet our team" lead="Decades of social work, child welfare, and community service. In service of every young person who walks through our door." />
+      <PageBanner path="/team/" crumb="Our Team" title="Meet our team" lead="Decades of social work, child welfare, and community service. In service of every young person who walks through our door." />
 
       {/* STAFF */}
       <section className="section">

@@ -3,8 +3,16 @@ import { join, extname } from "node:path";
 import sharp from "sharp";
 
 const DIR = "E:/Claude/Claudia House/website/public/images";
-const MAX = 1600;      // long-edge cap — ample for 2x retina at every display size on the site
 const QUALITY = 82;
+
+// Long-edge cap per folder, sized to ~2x the largest slot each image renders in.
+// Board portraits sit in a ~279px square card, so 1600px was ~20x the pixels needed.
+const CAPS = { board: 800, staff: 1200, services: 1200, support: 1200 };
+const DEFAULT_MAX = 1600;  // shared/ (hero, banner) and gallery/ (lightbox shows large)
+const capFor = (f) => {
+  const m = f.split("\\").join("/").match(/\/images\/([^/]+)\//);
+  return (m && CAPS[m[1]]) || DEFAULT_MAX;
+};
 
 function walk(d, acc = []) {
   for (const e of readdirSync(d)) {
@@ -28,6 +36,7 @@ for (const f of files) {
 
   // Cap the long edge regardless of orientation. Both dimensions are passed with
   // fit:"inside" so EXIF-rotated portraits are capped correctly too.
+  const MAX = capFor(f);
   let pipe = img;
   if (long > MAX) {
     pipe = pipe.resize({ width: MAX, height: MAX, fit: "inside", withoutEnlargement: true });

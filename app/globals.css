@@ -41,7 +41,23 @@
   h3 { font-weight: 700; font-size: 1.5rem; line-height: 1.2; }
   a { color: var(--color-primary); text-decoration: none; }
   :focus-visible { outline: 3px solid var(--color-primary); outline-offset: 2px; border-radius: 4px; }
+  /* the teal ring only reaches 2.5:1 on the deep-teal footer/CTA band, below the
+     3:1 minimum for focus indicators — switch to white on those surfaces */
+  footer :focus-visible,
+  .on-deep :focus-visible { outline-color: #fff; }
   img { display: block; max-width: 100%; }
+
+  /* Respect the OS "reduce motion" setting: no smooth scrolling, no transitions.
+     Vestibular disorders make large animated scrolls genuinely unpleasant. */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
 /* ---- Reusable components ---- */

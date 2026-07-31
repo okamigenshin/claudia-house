@@ -2,7 +2,18 @@ import CtaBand from "@/components/CtaBand";
 import Icon from "@/components/Icon";
 import { aboutStory, commitments } from "@/lib/content";
 
-export const metadata = { title: "About | Claudia House" };
+export const metadata = {
+  title: "About Us",
+  description:
+    "The story behind Claudia House, a Portland, Oregon nonprofit offering a Residential Independent Living Program for justice-involved young adults ages 18–25.",
+  alternates: { canonical: "/about/" },
+  openGraph: {
+    title: "About Us | Claudia House",
+    description:
+      "The story behind Claudia House, a Portland, Oregon nonprofit offering a Residential Independent Living Program for justice-involved young adults ages 18–25.",
+    url: "/about/",
+  },
+};
 
 export default function About() {
   return (
@@ -24,7 +35,9 @@ export default function About() {
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] font-display text-lg font-bold text-white">
                     {num}
                   </span>
-                  <h3 className="pt-1">{title}</h3>
+                  {/* h2, not h3: these are top-level sections of the page and
+                      previously created an h1 -> h3 skip. Size kept identical. */}
+                  <h2 className="pt-1 text-[1.5rem] leading-tight">{title}</h2>
                 </div>
                 {s.paras.map((p, i) => (
                   <p key={i} className="soft mt-4">{p}</p>

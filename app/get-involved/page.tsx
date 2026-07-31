@@ -4,12 +4,23 @@ import { jobs, majorSupporters, communitySupporters, supporterLinks, site } from
 import { asset } from "@/lib/config";
 import Icon, { type IconName } from "@/components/Icon";
 
-export const metadata = { title: "Get Involved | Claudia House" };
+export const metadata = {
+  title: "Get Involved",
+  description:
+    "Donate, volunteer, or apply for a Case Manager or Direct Care role at Claudia House, a Portland 501(c)(3) supporting justice-involved young adults ages 18–25.",
+  alternates: { canonical: "/get-involved/" },
+  openGraph: {
+    title: "Get Involved | Claudia House",
+    description:
+      "Donate, volunteer, or apply for a Case Manager or Direct Care role at Claudia House, a Portland 501(c)(3) supporting justice-involved young adults ages 18–25.",
+    url: "/get-involved/",
+  },
+};
 
 export default function GetInvolved() {
   return (
     <>
-      <PageBanner crumb="Get Involved" title="Join our mission" lead="Give, volunteer, or build a career. Every contribution helps a young person become a future leader." />
+      <PageBanner path="/get-involved/" crumb="Get Involved" title="Join our mission" lead="Give, volunteer, or build a career. Every contribution helps a young person become a future leader." />
 
       {/* DONATE */}
       <section className="section">
@@ -56,7 +67,7 @@ export default function GetInvolved() {
             <a
               href="https://www.fredmeyer.com/topic/community-rewards-4"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               className="btn btn-outline btn-sm mt-6"
             >
               Link your Rewards Card &rarr;
@@ -133,7 +144,7 @@ export default function GetInvolved() {
               const cls = "rounded-xl border border-[var(--color-line)] px-6 py-3 font-medium text-[var(--color-primary-deep)]";
               const href = supporterLinks[s];
               return href ? (
-                <a key={s} href={href} target="_blank" rel="noopener" className={`${cls} transition-colors hover:bg-[var(--color-tint)] hover:border-[var(--color-primary)]`}>{s}</a>
+                <a key={s} href={href} target="_blank" rel="noopener noreferrer" className={`${cls} transition-colors hover:bg-[var(--color-tint)] hover:border-[var(--color-primary)]`}>{s}</a>
               ) : (
                 <span key={s} className={cls}>{s}</span>
               );
@@ -148,15 +159,15 @@ export default function GetInvolved() {
           <p className="eyebrow">Website Acknowledgment</p>
           <p className="soft mt-5 text-balance leading-[1.8]">
             This website was designed, developed, and secured through the generous donation of time and expertise from{" "}
-            <a href="https://hemanthvishnu.com" target="_blank" rel="noopener" className="font-semibold text-[var(--color-primary-deep)] underline decoration-[var(--color-line)] underline-offset-4 hover:decoration-[var(--color-primary)]">Hemanth Vishnu Akula</a>, Founder at{" "}
-            <a href="https://authexlabs.com" target="_blank" rel="noopener" className="font-semibold text-[var(--color-primary-deep)] underline decoration-[var(--color-line)] underline-offset-4 hover:decoration-[var(--color-primary)]">Authex Labs</a>.
+            <a href="https://hemanthvishnu.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-[var(--color-primary-deep)] underline decoration-[var(--color-line)] underline-offset-4 hover:decoration-[var(--color-primary)]">Hemanth Vishnu Akula</a>, Founder at{" "}
+            <a href="https://authexlabs.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-[var(--color-primary-deep)] underline decoration-[var(--color-line)] underline-offset-4 hover:decoration-[var(--color-primary)]">Authex Labs</a>.
           </p>
           <p className="soft mt-4 text-balance leading-[1.8]">
             Thank you for supporting Claudia House and helping us strengthen our online&nbsp;presence.
           </p>
           <p className="mt-7 text-sm italic text-[var(--color-ink-soft)]">
             {/* nbsp keeps the separator tied to the name so it can never start a line */}
-            <a href="https://authexlabs.com" target="_blank" rel="noopener" className="transition-colors hover:text-[var(--color-primary)]">Authex Labs</a>&nbsp;&middot; Glasgow, United Kingdom
+            <a href="https://authexlabs.com" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[var(--color-primary)]">Authex Labs</a>&nbsp;&middot; Glasgow, United Kingdom
           </p>
         </div>
       </section>

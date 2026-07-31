@@ -3,7 +3,18 @@ import CtaBand from "@/components/CtaBand";
 import { focusAreas } from "@/lib/content";
 import { asset } from "@/lib/config";
 
-export const metadata = { title: "Programs | Claudia House" };
+export const metadata = {
+  title: "Programs",
+  description:
+    "Claudia House's Residential Independent Living Program: housing, employment, education and financial-literacy pathways for young adults ages 18–25 in Portland, Oregon.",
+  alternates: { canonical: "/programs/" },
+  openGraph: {
+    title: "Programs | Claudia House",
+    description:
+      "Claudia House's Residential Independent Living Program: housing, employment, education and financial-literacy pathways for young adults ages 18–25 in Portland, Oregon.",
+    url: "/programs/",
+  },
+};
 
 const stages = [
   { n: "Stage 01", t: "Pre-Placement", b: "Youth build trust with staff before placement, creating connections that lay the foundation for a successful transition." },
@@ -14,7 +25,7 @@ const stages = [
 export default function Programs() {
   return (
     <>
-      <PageBanner crumb="Programs" title="Pathways to ILP" lead="Helping youth thrive with independent-living skills: before, during, and beyond their stay." />
+      <PageBanner path="/programs/" crumb="Programs" title="Pathways to ILP" lead="Helping youth thrive with independent-living skills: before, during, and beyond their stay." />
 
       {/* STAGES */}
       <section className="section">
@@ -22,7 +33,8 @@ export default function Programs() {
           {stages.map((s) => (
             <div key={s.t} className={`card ${s.feature ? "border-2 border-[var(--color-primary)]" : ""}`}>
               <p className="eyebrow">{s.n}</p>
-              <h3 className="my-3">{s.t}</h3>
+              {/* h2 avoids an h1 -> h3 skip; size kept identical to the old h3 */}
+              <h2 className="my-3 text-[1.5rem] leading-tight">{s.t}</h2>
               <p className="soft">{s.b}</p>
             </div>
           ))}
