@@ -2,10 +2,14 @@
 
 /* ---- Design tokens (Claudia House — Non-profit/Charity palette) ---- */
 @theme {
-  --color-primary: #0891b2;       /* Compassion blue */
+  /* Primary and accent are darkened from the original #0891b2 / #ea580c, which
+     measured 3.68:1 and 3.56:1 on white — below the 4.5:1 WCAG AA minimum for
+     the small text they carry (eyebrows, links, role labels, button labels).
+     Current values clear AA on white, on the tint, and as button backgrounds. */
+  --color-primary: #0e7490;       /* Compassion blue (was #0891b2) — 5.36:1 on white */
   --color-primary-deep: #164e63;  /* Deep teal — headlines */
-  --color-accent: #ea580c;        /* Action orange — CTAs */
-  --color-accent-deep: #c2410c;
+  --color-accent: #c2410c;        /* Action orange — CTAs, 5.18:1 on white */
+  --color-accent-deep: #9a3412;   /* CTA hover — 7.31:1 with white text */
   --color-tint: #ecfeff;          /* Section tint */
   --color-muted: #e8f1f6;
   --color-ink: #1f2d33;           /* Body text */
