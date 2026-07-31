@@ -24,8 +24,10 @@ export default function GetInvolved() {
 
       {/* DONATE */}
       <section className="section">
-        <div className="wrap grid items-start gap-14 lg:grid-cols-2">
-          <div>
+        {/* On mobile the donate card leads: stacking text-first pushed the button
+            1.5 screens down for anyone arriving from a "Donate" CTA. */}
+        <div className="wrap grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
+          <div className="order-2 lg:order-1">
             <p className="eyebrow">Make a Donation</p>
             <h2 className="mt-4">Seed a brighter future</h2>
             <p className="soft mt-5">
@@ -38,7 +40,7 @@ export default function GetInvolved() {
               tax-deductible (official IRS approval letter available on request).
             </p>
           </div>
-          <div className="card bg-[var(--color-tint)] p-10">
+          <div className="card order-1 bg-[var(--color-tint)] p-10 lg:order-2">
             <h3>Give today</h3>
             {/* The amount chips that used to sit here were inert <span>s — they
                 looked selectable but did nothing. Amount selection is handled on
