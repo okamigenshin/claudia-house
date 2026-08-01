@@ -4,19 +4,14 @@ import { jobs, majorSupporters, communitySupporters, supporterLinks, site } from
 import { asset } from "@/lib/config";
 import Icon, { type IconName } from "@/components/Icon";
 import Img from "@/components/Img";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Get Involved",
   description:
     "Donate, volunteer, or apply for a Case Manager or Direct Care role at Claudia House, a Portland 501(c)(3) supporting justice-involved young adults ages 18–25.",
-  alternates: { canonical: "/get-involved/" },
-  openGraph: {
-    title: "Get Involved | Claudia House",
-    description:
-      "Donate, volunteer, or apply for a Case Manager or Direct Care role at Claudia House, a Portland 501(c)(3) supporting justice-involved young adults ages 18–25.",
-    url: "/get-involved/",
-  },
-};
+  path: "/get-involved/",
+});
 
 export default function GetInvolved() {
   return (

@@ -1,19 +1,14 @@
 import PageBanner from "@/components/PageBanner";
 import Icon, { type IconName } from "@/components/Icon";
 import { site } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Contact",
   description:
     "Contact Claudia House in Portland, Oregon for referrals, volunteering, donations or general enquiries. Call 503-379-0116 or email info@claudiahouse.com.",
-  alternates: { canonical: "/contact/" },
-  openGraph: {
-    title: "Contact | Claudia House",
-    description:
-      "Contact Claudia House in Portland, Oregon for referrals, volunteering, donations or general enquiries. Call 503-379-0116 or email info@claudiahouse.com.",
-    url: "/contact/",
-  },
-};
+  path: "/contact/",
+});
 
 export default function Contact() {
   return (

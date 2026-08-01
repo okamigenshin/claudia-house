@@ -3,19 +3,14 @@ import CtaBand from "@/components/CtaBand";
 import { focusAreas } from "@/lib/content";
 import { asset } from "@/lib/config";
 import Img from "@/components/Img";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Programs",
   description:
     "Claudia House's Residential Independent Living Program: housing, employment, education and financial-literacy pathways for young adults ages 18–25 in Portland, Oregon.",
-  alternates: { canonical: "/programs/" },
-  openGraph: {
-    title: "Programs | Claudia House",
-    description:
-      "Claudia House's Residential Independent Living Program: housing, employment, education and financial-literacy pathways for young adults ages 18–25 in Portland, Oregon.",
-    url: "/programs/",
-  },
-};
+  path: "/programs/",
+});
 
 const stages = [
   { n: "Stage 01", t: "Pre-Placement", b: "Youth build trust with staff before placement, creating connections that lay the foundation for a successful transition." },

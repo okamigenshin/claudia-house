@@ -56,7 +56,9 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col gap-3 border-t border-white/15 pt-6 text-sm text-[#9fc7d2] sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {site.name} &middot; 501(c)(3) Nonprofit &middot;{" "}
-            <Link href="/privacy" className="underline decoration-white/30 underline-offset-4 hover:text-white">Privacy Policy</Link>
+            {/* explicit colour: without it this inherits the global link teal,
+                which is 1.7:1 against the deep-teal footer */}
+            <Link href="/privacy" className="text-[#9fc7d2] underline decoration-white/30 underline-offset-4 hover:text-white">Privacy Policy</Link>
           </p>
           <a
             href="https://authexlabs.com"

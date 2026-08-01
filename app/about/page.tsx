@@ -1,19 +1,14 @@
 import CtaBand from "@/components/CtaBand";
 import Icon from "@/components/Icon";
 import { aboutStory, commitments } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "About Us",
   description:
     "The story behind Claudia House, a Portland, Oregon nonprofit offering a Residential Independent Living Program for justice-involved young adults ages 18–25.",
-  alternates: { canonical: "/about/" },
-  openGraph: {
-    title: "About Us | Claudia House",
-    description:
-      "The story behind Claudia House, a Portland, Oregon nonprofit offering a Residential Independent Living Program for justice-involved young adults ages 18–25.",
-    url: "/about/",
-  },
-};
+  path: "/about/",
+});
 
 export default function About() {
   return (

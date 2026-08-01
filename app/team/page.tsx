@@ -3,19 +3,14 @@ import CtaBand from "@/components/CtaBand";
 import { staff, board } from "@/lib/content";
 import { asset } from "@/lib/config";
 import Img from "@/components/Img";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Our Team",
   description:
     "Meet the staff and board of Claudia House, bringing decades of social work, child welfare and community service to Portland's justice-involved young adults.",
-  alternates: { canonical: "/team/" },
-  openGraph: {
-    title: "Our Team | Claudia House",
-    description:
-      "Meet the staff and board of Claudia House, bringing decades of social work, child welfare and community service to Portland's justice-involved young adults.",
-    url: "/team/",
-  },
-};
+  path: "/team/",
+});
 
 export default function Team() {
   return (

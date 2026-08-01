@@ -1,18 +1,13 @@
 import PageBanner from "@/components/PageBanner";
 import { site } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Privacy Policy",
   description:
     "How Claudia House handles information collected through this website, including contact form submissions and newsletter sign-ups.",
-  alternates: { canonical: "/privacy/" },
-  openGraph: {
-    title: "Privacy Policy | Claudia House",
-    description:
-      "How Claudia House handles information collected through this website, including contact form submissions and newsletter sign-ups.",
-    url: "/privacy/",
-  },
-};
+  path: "/privacy/",
+});
 
 // NOTE FOR THE ORGANISATION
 // This page describes what the website itself actually does: it is a static

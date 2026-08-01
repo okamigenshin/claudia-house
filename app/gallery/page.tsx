@@ -1,19 +1,14 @@
 import PageBanner from "@/components/PageBanner";
 import CtaBand from "@/components/CtaBand";
 import Gallery from "@/components/Gallery";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Gallery",
   description:
     "Step inside Claudia House: bedrooms, shared living spaces and the garden of the Portland home where young adults ages 18–25 build independent futures.",
-  alternates: { canonical: "/gallery/" },
-  openGraph: {
-    title: "Gallery | Claudia House",
-    description:
-      "Step inside Claudia House: bedrooms, shared living spaces and the garden of the Portland home where young adults ages 18–25 build independent futures.",
-    url: "/gallery/",
-  },
-};
+  path: "/gallery/",
+});
 
 export default function GalleryPage() {
   return (

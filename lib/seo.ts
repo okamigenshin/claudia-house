@@ -40,6 +40,46 @@ export const OG_IMAGE = {
   alt: "Claudia House — Where Youth Dream Big",
 };
 
+/**
+ * Full metadata for an interior page.
+ *
+ * Use this rather than hand-writing `openGraph` per page: defining an
+ * openGraph object in a child route REPLACES the parent's instead of merging,
+ * so a hand-written one silently drops og:image and the page shares as a blank
+ * card. Everything is spelled out here so that can't happen.
+ */
+export function pageMetadata({
+  title,
+  description,
+  path,
+}: {
+  title: string;
+  description: string;
+  path: string;
+}) {
+  const full = `${title} | ${ORG.name}`;
+  return {
+    title,
+    description,
+    alternates: { canonical: path },
+    openGraph: {
+      title: full,
+      description,
+      url: abs(path),
+      siteName: ORG.name,
+      type: "website" as const,
+      locale: "en_US",
+      images: [OG_IMAGE],
+    },
+    twitter: {
+      card: "summary_large_image" as const,
+      title: full,
+      description,
+      images: [OG_IMAGE.url],
+    },
+  };
+}
+
 /** Organisation graph, rendered once in the root layout. */
 export function orgJsonLd() {
   return {
