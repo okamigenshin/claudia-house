@@ -14,6 +14,7 @@ const routes: { path: string; priority: number }[] = [
   { path: "/team/", priority: 0.7 },
   { path: "/gallery/", priority: 0.6 },
   { path: "/contact/", priority: 0.8 },
+  { path: "/privacy/", priority: 0.3 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

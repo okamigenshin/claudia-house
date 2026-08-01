@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "eslint",
     "nojekyll": "node scripts/nojekyll.mjs",
-    "deploy": "next build && npm run nojekyll && gh-pages -d out -t -b gh-pages"
+    "images": "node scripts/optimize-images.mjs && node scripts/image-sizes.mjs && node scripts/generate-variants.mjs",
+    "deploy": "next build && npm run nojekyll && gh-pages -d out -t -b gh-pages",
+    "build:domain": "node scripts/build-domain.mjs",
+    "deploy:domain": "node scripts/build-domain.mjs && npm run nojekyll && gh-pages -d out -t -b gh-pages"
   },
   "dependencies": {
     "next": "16.2.9",

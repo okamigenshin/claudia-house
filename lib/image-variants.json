@@ -1,0 +1,790 @@
+{
+ "/images/board/01-trevor-emmett.jpg": {
+  "w": 532,
+  "h": 800,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/board/r/01-trevor-emmett-480.webp"
+   },
+   {
+    "w": 532,
+    "u": "/images/board/r/01-trevor-emmett.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/board/r/01-trevor-emmett-480.jpg"
+   }
+  ]
+ },
+ "/images/board/02-wanda-brown.jpg": {
+  "w": 450,
+  "h": 800,
+  "webp": [
+   {
+    "w": 450,
+    "u": "/images/board/r/02-wanda-brown.webp"
+   }
+  ],
+  "jpg": []
+ },
+ "/images/board/03-jessica-witte.jpg": {
+  "w": 535,
+  "h": 800,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/board/r/03-jessica-witte-480.webp"
+   },
+   {
+    "w": 535,
+    "u": "/images/board/r/03-jessica-witte.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/board/r/03-jessica-witte-480.jpg"
+   }
+  ]
+ },
+ "/images/board/04-pamela-williams.jpg": {
+  "w": 718,
+  "h": 741,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/board/r/04-pamela-williams-480.webp"
+   },
+   {
+    "w": 718,
+    "u": "/images/board/r/04-pamela-williams.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/board/r/04-pamela-williams-480.jpg"
+   }
+  ]
+ },
+ "/images/gallery/gallery-01-front-porch-entrance.jpg": {
+  "w": 1600,
+  "h": 757,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-01-front-porch-entrance-480.webp"
+   },
+   {
+    "w": 960,
+    "u": "/images/gallery/r/gallery-01-front-porch-entrance-960.webp"
+   },
+   {
+    "w": 1440,
+    "u": "/images/gallery/r/gallery-01-front-porch-entrance-1440.webp"
+   },
+   {
+    "w": 1600,
+    "u": "/images/gallery/r/gallery-01-front-porch-entrance.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-01-front-porch-entrance-480.jpg"
+   },
+   {
+    "w": 960,
+    "u": "/images/gallery/r/gallery-01-front-porch-entrance-960.jpg"
+   },
+   {
+    "w": 1440,
+    "u": "/images/gallery/r/gallery-01-front-porch-entrance-1440.jpg"
+   }
+  ]
+ },
+ "/images/gallery/gallery-02-front-door-autumn.jpg": {
+  "w": 758,
+  "h": 1600,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-02-front-door-autumn-480.webp"
+   },
+   {
+    "w": 758,
+    "u": "/images/gallery/r/gallery-02-front-door-autumn.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-02-front-door-autumn-480.jpg"
+   }
+  ]
+ },
+ "/images/gallery/gallery-03-porch-seating-area.jpg": {
+  "w": 1600,
+  "h": 757,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-03-porch-seating-area-480.webp"
+   },
+   {
+    "w": 960,
+    "u": "/images/gallery/r/gallery-03-porch-seating-area-960.webp"
+   },
+   {
+    "w": 1440,
+    "u": "/images/gallery/r/gallery-03-porch-seating-area-1440.webp"
+   },
+   {
+    "w": 1600,
+    "u": "/images/gallery/r/gallery-03-porch-seating-area.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-03-porch-seating-area-480.jpg"
+   },
+   {
+    "w": 960,
+    "u": "/images/gallery/r/gallery-03-porch-seating-area-960.jpg"
+   },
+   {
+    "w": 1440,
+    "u": "/images/gallery/r/gallery-03-porch-seating-area-1440.jpg"
+   }
+  ]
+ },
+ "/images/gallery/gallery-04-porch-table-plants.jpg": {
+  "w": 1600,
+  "h": 757,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-04-porch-table-plants-480.webp"
+   },
+   {
+    "w": 960,
+    "u": "/images/gallery/r/gallery-04-porch-table-plants-960.webp"
+   },
+   {
+    "w": 1440,
+    "u": "/images/gallery/r/gallery-04-porch-table-plants-1440.webp"
+   },
+   {
+    "w": 1600,
+    "u": "/images/gallery/r/gallery-04-porch-table-plants.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-04-porch-table-plants-480.jpg"
+   },
+   {
+    "w": 960,
+    "u": "/images/gallery/r/gallery-04-porch-table-plants-960.jpg"
+   },
+   {
+    "w": 1440,
+    "u": "/images/gallery/r/gallery-04-porch-table-plants-1440.jpg"
+   }
+  ]
+ },
+ "/images/gallery/gallery-05-living-room-fireplace.jpg": {
+  "w": 250,
+  "h": 528,
+  "webp": [
+   {
+    "w": 250,
+    "u": "/images/gallery/r/gallery-05-living-room-fireplace.webp"
+   }
+  ],
+  "jpg": []
+ },
+ "/images/gallery/gallery-06-living-room-lamp.jpg": {
+  "w": 250,
+  "h": 528,
+  "webp": [
+   {
+    "w": 250,
+    "u": "/images/gallery/r/gallery-06-living-room-lamp.webp"
+   }
+  ],
+  "jpg": []
+ },
+ "/images/gallery/gallery-07-inspirational-posters-wall.jpg": {
+  "w": 757,
+  "h": 1600,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-07-inspirational-posters-wall-480.webp"
+   },
+   {
+    "w": 757,
+    "u": "/images/gallery/r/gallery-07-inspirational-posters-wall.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-07-inspirational-posters-wall-480.jpg"
+   }
+  ]
+ },
+ "/images/gallery/gallery-08-inspirational-posters-cabinet.jpg": {
+  "w": 757,
+  "h": 1600,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-08-inspirational-posters-cabinet-480.webp"
+   },
+   {
+    "w": 757,
+    "u": "/images/gallery/r/gallery-08-inspirational-posters-cabinet.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-08-inspirational-posters-cabinet-480.jpg"
+   }
+  ]
+ },
+ "/images/gallery/gallery-09-home-office-desk.jpg": {
+  "w": 250,
+  "h": 528,
+  "webp": [
+   {
+    "w": 250,
+    "u": "/images/gallery/r/gallery-09-home-office-desk.webp"
+   }
+  ],
+  "jpg": []
+ },
+ "/images/gallery/gallery-10-staircase-books.jpg": {
+  "w": 250,
+  "h": 528,
+  "webp": [
+   {
+    "w": 250,
+    "u": "/images/gallery/r/gallery-10-staircase-books.webp"
+   }
+  ],
+  "jpg": []
+ },
+ "/images/gallery/gallery-11-sitting-area-french-doors.jpg": {
+  "w": 250,
+  "h": 528,
+  "webp": [
+   {
+    "w": 250,
+    "u": "/images/gallery/r/gallery-11-sitting-area-french-doors.webp"
+   }
+  ],
+  "jpg": []
+ },
+ "/images/gallery/gallery-12-bedroom-portland-blue.jpg": {
+  "w": 1600,
+  "h": 758,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-12-bedroom-portland-blue-480.webp"
+   },
+   {
+    "w": 960,
+    "u": "/images/gallery/r/gallery-12-bedroom-portland-blue-960.webp"
+   },
+   {
+    "w": 1440,
+    "u": "/images/gallery/r/gallery-12-bedroom-portland-blue-1440.webp"
+   },
+   {
+    "w": 1600,
+    "u": "/images/gallery/r/gallery-12-bedroom-portland-blue.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-12-bedroom-portland-blue-480.jpg"
+   },
+   {
+    "w": 960,
+    "u": "/images/gallery/r/gallery-12-bedroom-portland-blue-960.jpg"
+   },
+   {
+    "w": 1440,
+    "u": "/images/gallery/r/gallery-12-bedroom-portland-blue-1440.jpg"
+   }
+  ]
+ },
+ "/images/gallery/gallery-13-bedroom-blue.jpg": {
+  "w": 758,
+  "h": 1600,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-13-bedroom-blue-480.webp"
+   },
+   {
+    "w": 758,
+    "u": "/images/gallery/r/gallery-13-bedroom-blue.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-13-bedroom-blue-480.jpg"
+   }
+  ]
+ },
+ "/images/gallery/gallery-14-bedroom-green-be-brave.jpg": {
+  "w": 1600,
+  "h": 758,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-14-bedroom-green-be-brave-480.webp"
+   },
+   {
+    "w": 960,
+    "u": "/images/gallery/r/gallery-14-bedroom-green-be-brave-960.webp"
+   },
+   {
+    "w": 1440,
+    "u": "/images/gallery/r/gallery-14-bedroom-green-be-brave-1440.webp"
+   },
+   {
+    "w": 1600,
+    "u": "/images/gallery/r/gallery-14-bedroom-green-be-brave.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-14-bedroom-green-be-brave-480.jpg"
+   },
+   {
+    "w": 960,
+    "u": "/images/gallery/r/gallery-14-bedroom-green-be-brave-960.jpg"
+   },
+   {
+    "w": 1440,
+    "u": "/images/gallery/r/gallery-14-bedroom-green-be-brave-1440.jpg"
+   }
+  ]
+ },
+ "/images/gallery/gallery-15-back-patio.jpeg": {
+  "w": 1600,
+  "h": 900,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-15-back-patio-480.webp"
+   },
+   {
+    "w": 960,
+    "u": "/images/gallery/r/gallery-15-back-patio-960.webp"
+   },
+   {
+    "w": 1440,
+    "u": "/images/gallery/r/gallery-15-back-patio-1440.webp"
+   },
+   {
+    "w": 1600,
+    "u": "/images/gallery/r/gallery-15-back-patio.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-15-back-patio-480.jpg"
+   },
+   {
+    "w": 960,
+    "u": "/images/gallery/r/gallery-15-back-patio-960.jpg"
+   },
+   {
+    "w": 1440,
+    "u": "/images/gallery/r/gallery-15-back-patio-1440.jpg"
+   }
+  ]
+ },
+ "/images/gallery/gallery-16-back-entrance-ramp.jpeg": {
+  "w": 1600,
+  "h": 900,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-16-back-entrance-ramp-480.webp"
+   },
+   {
+    "w": 960,
+    "u": "/images/gallery/r/gallery-16-back-entrance-ramp-960.webp"
+   },
+   {
+    "w": 1440,
+    "u": "/images/gallery/r/gallery-16-back-entrance-ramp-1440.webp"
+   },
+   {
+    "w": 1600,
+    "u": "/images/gallery/r/gallery-16-back-entrance-ramp.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-16-back-entrance-ramp-480.jpg"
+   },
+   {
+    "w": 960,
+    "u": "/images/gallery/r/gallery-16-back-entrance-ramp-960.jpg"
+   },
+   {
+    "w": 1440,
+    "u": "/images/gallery/r/gallery-16-back-entrance-ramp-1440.jpg"
+   }
+  ]
+ },
+ "/images/gallery/gallery-17-garden-raised-bed.jpeg": {
+  "w": 1600,
+  "h": 900,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-17-garden-raised-bed-480.webp"
+   },
+   {
+    "w": 960,
+    "u": "/images/gallery/r/gallery-17-garden-raised-bed-960.webp"
+   },
+   {
+    "w": 1440,
+    "u": "/images/gallery/r/gallery-17-garden-raised-bed-1440.webp"
+   },
+   {
+    "w": 1600,
+    "u": "/images/gallery/r/gallery-17-garden-raised-bed.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/gallery/r/gallery-17-garden-raised-bed-480.jpg"
+   },
+   {
+    "w": 960,
+    "u": "/images/gallery/r/gallery-17-garden-raised-bed-960.jpg"
+   },
+   {
+    "w": 1440,
+    "u": "/images/gallery/r/gallery-17-garden-raised-bed-1440.jpg"
+   }
+  ]
+ },
+ "/images/services/01-services.jpg": {
+  "w": 1200,
+  "h": 800,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/services/r/01-services-480.webp"
+   },
+   {
+    "w": 960,
+    "u": "/images/services/r/01-services-960.webp"
+   },
+   {
+    "w": 1200,
+    "u": "/images/services/r/01-services.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/services/r/01-services-480.jpg"
+   },
+   {
+    "w": 960,
+    "u": "/images/services/r/01-services-960.jpg"
+   }
+  ]
+ },
+ "/images/services/02-services.jpg": {
+  "w": 904,
+  "h": 1200,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/services/r/02-services-480.webp"
+   },
+   {
+    "w": 904,
+    "u": "/images/services/r/02-services.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/services/r/02-services-480.jpg"
+   }
+  ]
+ },
+ "/images/services/03-services.jpeg": {
+  "w": 1200,
+  "h": 704,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/services/r/03-services-480.webp"
+   },
+   {
+    "w": 960,
+    "u": "/images/services/r/03-services-960.webp"
+   },
+   {
+    "w": 1200,
+    "u": "/images/services/r/03-services.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/services/r/03-services-480.jpg"
+   },
+   {
+    "w": 960,
+    "u": "/images/services/r/03-services-960.jpg"
+   }
+  ]
+ },
+ "/images/services/04-services-icon.jpg": {
+  "w": 335,
+  "h": 150,
+  "webp": [
+   {
+    "w": 335,
+    "u": "/images/services/r/04-services-icon.webp"
+   }
+  ],
+  "jpg": []
+ },
+ "/images/services/05-services-graphic.png": {
+  "w": 800,
+  "h": 359,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/services/r/05-services-graphic-480.webp"
+   },
+   {
+    "w": 800,
+    "u": "/images/services/r/05-services-graphic.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/services/r/05-services-graphic-480.jpg"
+   }
+  ]
+ },
+ "/images/shared/banner-claudia.jpg": {
+  "w": 1600,
+  "h": 757,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/shared/r/banner-claudia-480.webp"
+   },
+   {
+    "w": 960,
+    "u": "/images/shared/r/banner-claudia-960.webp"
+   },
+   {
+    "w": 1440,
+    "u": "/images/shared/r/banner-claudia-1440.webp"
+   },
+   {
+    "w": 1600,
+    "u": "/images/shared/r/banner-claudia.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/shared/r/banner-claudia-480.jpg"
+   },
+   {
+    "w": 960,
+    "u": "/images/shared/r/banner-claudia-960.jpg"
+   },
+   {
+    "w": 1440,
+    "u": "/images/shared/r/banner-claudia-1440.jpg"
+   }
+  ]
+ },
+ "/images/shared/hero-background.jpg": {
+  "w": 1600,
+  "h": 1239,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/shared/r/hero-background-480.webp"
+   },
+   {
+    "w": 960,
+    "u": "/images/shared/r/hero-background-960.webp"
+   },
+   {
+    "w": 1440,
+    "u": "/images/shared/r/hero-background-1440.webp"
+   },
+   {
+    "w": 1600,
+    "u": "/images/shared/r/hero-background.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/shared/r/hero-background-480.jpg"
+   },
+   {
+    "w": 960,
+    "u": "/images/shared/r/hero-background-960.jpg"
+   },
+   {
+    "w": 1440,
+    "u": "/images/shared/r/hero-background-1440.jpg"
+   }
+  ]
+ },
+ "/images/shared/logo.jpeg": {
+  "w": 1200,
+  "h": 1200,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/shared/r/logo-480.webp"
+   },
+   {
+    "w": 960,
+    "u": "/images/shared/r/logo-960.webp"
+   },
+   {
+    "w": 1200,
+    "u": "/images/shared/r/logo.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/shared/r/logo-480.jpg"
+   },
+   {
+    "w": 960,
+    "u": "/images/shared/r/logo-960.jpg"
+   }
+  ]
+ },
+ "/images/shared/og-image.jpg": {
+  "w": 1200,
+  "h": 630,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/shared/r/og-image-480.webp"
+   },
+   {
+    "w": 960,
+    "u": "/images/shared/r/og-image-960.webp"
+   },
+   {
+    "w": 1200,
+    "u": "/images/shared/r/og-image.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/shared/r/og-image-480.jpg"
+   },
+   {
+    "w": 960,
+    "u": "/images/shared/r/og-image-960.jpg"
+   }
+  ]
+ },
+ "/images/staff/01-lambert-adjibogoun-executive-director.jpg": {
+  "w": 405,
+  "h": 720,
+  "webp": [
+   {
+    "w": 405,
+    "u": "/images/staff/r/01-lambert-adjibogoun-executive-director.webp"
+   }
+  ],
+  "jpg": []
+ },
+ "/images/staff/02-kim-hartnagel-program-coordinator.jpg": {
+  "w": 900,
+  "h": 1200,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/staff/r/02-kim-hartnagel-program-coordinator-480.webp"
+   },
+   {
+    "w": 900,
+    "u": "/images/staff/r/02-kim-hartnagel-program-coordinator.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/staff/r/02-kim-hartnagel-program-coordinator-480.jpg"
+   }
+  ]
+ },
+ "/images/support/01-support.jpg": {
+  "w": 1200,
+  "h": 700,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/support/r/01-support-480.webp"
+   },
+   {
+    "w": 960,
+    "u": "/images/support/r/01-support-960.webp"
+   },
+   {
+    "w": 1200,
+    "u": "/images/support/r/01-support.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/support/r/01-support-480.jpg"
+   },
+   {
+    "w": 960,
+    "u": "/images/support/r/01-support-960.jpg"
+   }
+  ]
+ }
+}

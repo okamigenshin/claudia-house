@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { pillars, gallery, supporters, missionParagraphs, missionStatement } from "@/lib/content";
-import { asset } from "@/lib/config";
 import Icon, { type IconName } from "@/components/Icon";
+import Img from "@/components/Img";
 
 const stats = [
   { n: "100%", l: "Trauma-informed, culturally responsive care" },
@@ -29,10 +29,11 @@ export default function Home() {
               <Link href="/get-involved" className="btn btn-primary">Support a Youth &rarr;</Link>
             </div>
           </div>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={asset("/images/shared/hero-background.jpg")}
+          <Img
+            src="/images/shared/hero-background.jpg"
             alt="A group of diverse, smiling young people sitting together"
+            sizes="(min-width: 1024px) 46vw, 92vw"
+            priority
             className="aspect-[5/4] w-full rounded-3xl object-cover shadow-sm"
           />
         </div>
@@ -102,18 +103,22 @@ export default function Home() {
               </p>
               <Link href="/gallery" className="btn btn-outline mt-7">View the gallery &rarr;</Link>
             </div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={asset("/images/shared/banner-claudia.jpg")}
+            <Img
+              src="/images/shared/banner-claudia.jpg"
               alt="The welcoming front porch of Claudia House"
-              loading="lazy"
+              sizes="(min-width: 1024px) 46vw, 92vw"
               className="aspect-[16/10] w-full rounded-3xl object-cover"
             />
           </div>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
             {homeGallery.map((img) => (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img key={img.src} src={asset(img.src)} alt={img.alt} loading="lazy" className="aspect-[4/3] w-full rounded-2xl object-cover" />
+              <Img
+                key={img.src}
+                src={img.src}
+                alt={img.alt}
+                sizes="(min-width: 768px) 30vw, 46vw"
+                className="aspect-[4/3] w-full rounded-2xl object-cover"
+              />
             ))}
           </div>
         </div>

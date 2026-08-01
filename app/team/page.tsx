@@ -2,6 +2,7 @@ import PageBanner from "@/components/PageBanner";
 import CtaBand from "@/components/CtaBand";
 import { staff, board } from "@/lib/content";
 import { asset } from "@/lib/config";
+import Img from "@/components/Img";
 
 export const metadata = {
   title: "Our Team",
@@ -34,8 +35,7 @@ export default function Team() {
                 {p.img ? (
                   // Portrait box + upper-third focal point: the source photos are all tall,
                   // so a landscape crop cut off heads.
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={asset(p.img)} alt={`Portrait of ${p.name}`} loading="lazy" className="aspect-[4/5] w-full object-cover object-[50%_25%]" />
+                  <Img src={p.img} alt={`Portrait of ${p.name}`} sizes="(min-width: 768px) 46vw, 92vw" className="aspect-[4/5] w-full object-cover object-[50%_25%]" />
                 ) : (
                   // Shorter box than a real portrait: a 4/5 void reads as a missing image.
                   <div className="flex aspect-[3/2] w-full items-center justify-center bg-[var(--color-tint)]">
@@ -69,7 +69,7 @@ export default function Team() {
             {board.map((p) => (
               <article key={p.name} className="overflow-hidden rounded-2xl border border-[var(--color-line)] bg-white">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={asset(p.img)} alt={`Portrait of ${p.name}`} loading="lazy" className="aspect-square w-full object-cover object-[50%_22%]" />
+                <Img src={p.img} alt={`Portrait of ${p.name}`} sizes="(min-width: 1024px) 23vw, (min-width: 640px) 46vw, 92vw" className="aspect-square w-full object-cover object-[50%_22%]" />
                 <div className="p-6">
                   <h3 className="text-[1.3rem]">{p.name}</h3>
                   <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-[var(--color-accent)]">{p.role}</p>

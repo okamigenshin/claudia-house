@@ -55,7 +55,9 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-3 border-t border-white/15 pt-6 text-sm text-[#9fc7d2] sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; {site.name} &middot; 501(c)(3) Nonprofit &middot; All Rights Reserved</p>
+          <p>&copy; {site.name} &middot; 501(c)(3) Nonprofit &middot;{" "}
+            <Link href="/privacy" className="underline decoration-white/30 underline-offset-4 hover:text-white">Privacy Policy</Link>
+          </p>
           <a
             href="https://authexlabs.com"
             target="_blank"

@@ -2,6 +2,7 @@ import PageBanner from "@/components/PageBanner";
 import CtaBand from "@/components/CtaBand";
 import { focusAreas } from "@/lib/content";
 import { asset } from "@/lib/config";
+import Img from "@/components/Img";
 
 export const metadata = {
   title: "Programs",
@@ -75,8 +76,7 @@ export default function Programs() {
               Oregon Coast & Columbia River Gorge, and public-transit practice.
             </p>
           </div>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={asset("/images/gallery/gallery-07-inspirational-posters-wall.jpg")} alt="A wall of inspirational posters inside the home" loading="lazy" className="aspect-[4/3] w-full rounded-3xl object-cover" />
+          <Img src="/images/gallery/gallery-07-inspirational-posters-wall.jpg" alt="A wall of inspirational posters inside the home" sizes="(min-width: 1024px) 46vw, 92vw" className="aspect-[4/3] w-full rounded-3xl object-cover" />
         </div>
       </section>
 

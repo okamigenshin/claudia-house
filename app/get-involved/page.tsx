@@ -3,6 +3,7 @@ import PageBanner from "@/components/PageBanner";
 import { jobs, majorSupporters, communitySupporters, supporterLinks, site } from "@/lib/content";
 import { asset } from "@/lib/config";
 import Icon, { type IconName } from "@/components/Icon";
+import Img from "@/components/Img";
 
 export const metadata = {
   title: "Get Involved",
@@ -63,8 +64,7 @@ export default function GetInvolved() {
       <section className="section bg-[var(--color-tint)]">
         <div className="wrap grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           {/* order flips so the heading leads on mobile, matching the other alternating rows */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={asset("/images/gallery/gallery-17-garden-raised-bed.jpeg")} alt="Raised garden bed at Claudia House" loading="lazy" className="order-2 aspect-[16/10] w-full rounded-3xl object-cover lg:order-1" />
+          <Img src="/images/gallery/gallery-17-garden-raised-bed.jpeg" alt="Raised garden bed at Claudia House" sizes="(min-width: 1024px) 46vw, 92vw" className="order-2 aspect-[16/10] w-full rounded-3xl object-cover lg:order-1" />
           <div className="order-1 lg:order-2">
             <p className="eyebrow">When You Shop, You Give</p>
             <h2 className="mt-4">Fred Meyer Community Rewards</h2>

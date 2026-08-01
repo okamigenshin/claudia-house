@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { gallery, type GalleryCategory } from "@/lib/content";
 import { asset } from "@/lib/config";
 import sizes from "@/lib/image-sizes.json";
+import Img from "@/components/Img";
 
 const filters: ("All" | GalleryCategory)[] = [
   "All", "Exterior", "Living Spaces", "Bedrooms", "Outdoors & Garden",
@@ -89,14 +90,12 @@ export default function Gallery() {
             aria-label={`View larger: ${img.alt}`}
             className="mb-4 block w-full overflow-hidden rounded-2xl border border-[var(--color-line)] [break-inside:avoid]"
           >
-            {/* intrinsic width/height let the browser reserve space before load —
-                prevents the masonry columns reflowing as each image arrives */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={asset(img.src)}
+            {/* Img emits intrinsic width/height, so the masonry columns reserve
+                space instead of reflowing as each image arrives */}
+            <Img
+              src={img.src}
               alt={img.alt}
-              loading="lazy"
-              {...dim(img.src)}
+              sizes="(min-width: 1024px) 31vw, (min-width: 640px) 46vw, 92vw"
               className="h-auto w-full transition-transform duration-300 hover:scale-[1.03]"
             />
           </button>
