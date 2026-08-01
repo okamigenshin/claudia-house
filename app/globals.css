@@ -50,6 +50,11 @@
   footer :focus-visible,
   .on-deep :focus-visible { outline-color: #fff; }
   img { display: block; max-width: 100%; }
+  /* <source> carries no visual content, but preflight leaves it block-level.
+     Combined with display:contents on <picture> that makes each <source> a
+     grid/flex item of the parent, adding phantom cells and pushing the real
+     image into the next row. It must never generate a box. */
+  picture > source { display: none; }
 
   /* Respect the OS "reduce motion" setting: no smooth scrolling, no transitions.
      Vestibular disorders make large animated scrolls genuinely unpleasant. */
