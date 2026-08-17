@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { site } from "@/lib/content";
+import { asset } from "@/lib/config";
 
 export default function Footer() {
   return (
@@ -7,9 +8,16 @@ export default function Footer() {
       <div className="wrap py-20">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.4fr]">
           <div>
-            <div className="font-display text-2xl font-black text-white">
-              CLAUDIA<span className="text-[#5fd3e8]">HOUSE</span>
-            </div>
+            {/* Full lockup here rather than a wordmark: this is where the
+                "Dream big" tagline belongs. Light tint for the deep-teal ground. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={asset("/images/shared/logo-lockup-light.png")}
+              alt="Claudia House — Dream big"
+              width={520}
+              height={511}
+              className="h-auto w-[150px]"
+            />
             <p className="mt-4 max-w-xs text-[#aecfd8]">
               A safe home and a fresh start for Oregon&rsquo;s youth. Building future leaders: mind, body, and spirit.
             </p>

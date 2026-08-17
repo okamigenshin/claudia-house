@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { nav } from "@/lib/content";
+import { asset } from "@/lib/config";
 
 export default function Header() {
   const pathname = usePathname();
@@ -22,8 +23,20 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--color-line)] bg-white/90 backdrop-blur">
       <div className="wrap flex h-[84px] items-center justify-between">
-        <Link href="/" className="font-display text-2xl font-black tracking-tight text-[var(--color-primary-deep)]">
-          CLAUDIA<span className="text-[var(--color-primary)]">HOUSE</span>
+        {/* Emblem + wordmark. alt="" on the mark because the adjacent text already
+            names the organisation — otherwise screen readers announce it twice. */}
+        <Link href="/" aria-label="Claudia House — home" className="flex items-center gap-3">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={asset("/images/shared/logo-mark.png")}
+            alt=""
+            width={256}
+            height={256}
+            className="h-11 w-11 shrink-0"
+          />
+          <span className="font-display text-2xl font-black tracking-tight text-[var(--color-primary-deep)]">
+            CLAUDIA<span className="text-[var(--color-primary)]">HOUSE</span>
+          </span>
         </Link>
 
         {/* Desktop nav */}
