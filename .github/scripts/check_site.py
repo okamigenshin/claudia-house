@@ -93,6 +93,9 @@ if not (OUT / "CNAME").exists() or (OUT / "CNAME").read_text().strip() != "claud
     errors.append("Unexpected publishing domain")
 if not (OUT / ".nojekyll").exists():
     errors.append("Missing .nojekyll")
+for route in ("about", "programs", "team", "gallery", "get-involved", "contact", "privacy"):
+    if not (OUT / route / f"__next.{route}.__PAGE__.txt").exists():
+        errors.append(f"{route}: missing browser segment payload")
 if errors:
     raise SystemExit("\n".join(errors))
 print(f"Site safety passed: {len(pages)} pages, exact script hashes, no form submissions.")

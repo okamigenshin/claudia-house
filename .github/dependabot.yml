@@ -7,7 +7,7 @@ updates:
     open-pull-requests-limit: 5
     groups:
       next:
-        patterns: [next, eslint-config-next]
+        patterns: [next, react, react-dom]
   - package-ecosystem: github-actions
     directory: /
     schedule:
