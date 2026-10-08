@@ -23,6 +23,15 @@
 # misc
 .DS_Store
 *.pem
+*.key
+*.pfx
+*.p12
+*.sqlite
+*.sqlite3
+*.db
+*.sql
+*.bak
+.security-audit/
 
 # debug
 npm-debug.log*

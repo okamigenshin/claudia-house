@@ -1,148 +1,36 @@
-# Claudia House — Build & Deploy Guide
+# Claudia House build and deployment
 
-A **Next.js 16** site that builds to a **fully static** `out/` folder — no Node runtime needed.
+The live site is https://claudiahouse.com/. Source lives on `master`.
+GitHub Actions publishes a checked static `out/` artifact after changes merge.
+The old `gh-pages` branch is a historical build and is no longer a publishing source.
 
-**Live site:** https://okamigenshin.github.io/claudia-house/
-**Repo:** https://github.com/okamigenshin/claudia-house
+## Making changes
 
----
+1. Install the locked dependencies with `npm ci --ignore-scripts`.
+2. Work on a separate branch and run `npm run lint`, `npm audit`, and `npm run build:domain`.
+3. Run `python .github/scripts/check_site.py` and preview `out/` locally.
+4. Open a pull request. The required Site safety check must pass before it can merge.
+5. Merge using GitHub's squash merge. The workflow builds, scans and publishes automatically.
 
-## Deploy (current setup: GitHub Pages)
+Do not push generated files to `gh-pages` or upload an unchecked export. The old direct deployment scripts and their publishing dependency have been removed.
 
-The site is hosted on GitHub Pages from the **`gh-pages`** branch. To publish changes:
+## Production build
 
-```bash
-cd website
-npm run deploy      # builds, adds .nojekyll, pushes out/ to the gh-pages branch
-```
+`npm run build:domain` sets the root domain and base path, runs Next.js static export,
+and adds a restrictive Content Security Policy with the exact inline-script hashes
+for each generated HTML page. It also adds a referrer policy and `.nojekyll`.
+`public/CNAME` is copied into the export. A plain `npm run build` does not include
+this security post-processing and should not be used as a release artifact.
 
-That's it — Pages rebuilds automatically and the live site updates in ~1 minute.
-Source code lives on `master`; the built site lives on `gh-pages` (don't edit it by hand).
+GitHub Pages must use **GitHub Actions** as its source. Only `master` is allowed to
+publish to the `github-pages` environment. The deployment job has the Pages and OIDC
+permissions it needs; validation jobs have read-only permissions.
 
----
+## Enquiries
 
-## Moving to another host (Vercel, Netlify, custom domain)
+The previous contact form used a placeholder destination, and newsletter inputs had
+no delivery service. The site now directs people to the existing email and phone
+contacts. Adding any data collection requires an approved destination, an appropriate
+privacy notice, and a review of the form and CSP before publication.
 
-The site is portable. `basePath` is `/claudia-house` **only because** the GitHub Pages URL is
-`…github.io/claudia-house/`. For any **root** host (Vercel, Netlify, or claudiahouse.com), build
-with the base path empty — no code changes needed:
-
-```bash
-NEXT_PUBLIC_BASE_PATH= npm run build     # -> out/ with root-relative paths
-```
-
-- **Vercel/Netlify:** connect the GitHub repo and set the env var `NEXT_PUBLIC_BASE_PATH` to empty
-  (or `/`). They auto-build on every push — you can drop the `gh-pages` deploy script entirely.
-- **Custom domain on GitHub Pages:** add a `public/CNAME` file containing the domain, set
-  `NEXT_PUBLIC_BASE_PATH=` empty, and point DNS at GitHub.
-
-Default (no env var) keeps the current GitHub Pages `/claudia-house` setup working as-is.
-
----
-
-## Alternative: VPS + nginx
-
-If you later move off Pages, the same static `out/` serves from nginx.
-
----
-
-## 1. Local development
-
-```bash
-cd website
-npm install        # first time only
-npm run dev        # http://localhost:3000
-```
-
-## 2. Build the static site
-
-```bash
-npm run build      # outputs the static site to website/out/
-```
-
-`out/` contains plain HTML/CSS/JS + the `images/` folder. That's the whole site.
-
----
-
-## 3. Deploy to the VPS
-
-### Option A — build locally, copy `out/` up (simplest)
-
-```bash
-# from website/ after `npm run build`
-rsync -avz --delete out/ user@YOUR_VPS_IP:/var/www/claudiahouse/
-# (Windows without rsync: use scp -r out/* user@VPS:/var/www/claudiahouse/)
-```
-
-### Option B — push to git, build on the VPS
-
-```bash
-# on the VPS, one-time
-git clone YOUR_REPO /opt/claudiahouse && cd /opt/claudiahouse/website
-# each deploy
-git pull && npm ci && npm run build
-rsync -a --delete out/ /var/www/claudiahouse/
-```
-
-### nginx server block  (`/etc/nginx/sites-available/claudiahouse`)
-
-```nginx
-server {
-    listen 80;
-    server_name claudiahouse.com www.claudiahouse.com;
-    root /var/www/claudiahouse;
-    index index.html;
-
-    # trailingSlash export emits /about/index.html, so this resolves cleanly
-    location / {
-        try_files $uri $uri/ $uri.html =404;
-    }
-
-    # long-cache hashed assets and images
-    location /_next/static/ { expires 1y; add_header Cache-Control "public, immutable"; }
-    location /images/       { expires 30d; add_header Cache-Control "public"; }
-
-    error_page 404 /404.html;
-    gzip on;
-    gzip_types text/css application/javascript image/svg+xml;
-}
-```
-
-```bash
-sudo ln -s /etc/nginx/sites-available/claudiahouse /etc/nginx/sites-enabled/
-sudo nginx -t && sudo systemctl reload nginx
-```
-
-### HTTPS (free, recommended)
-
-```bash
-sudo apt install certbot python3-certbot-nginx
-sudo certbot --nginx -d claudiahouse.com -d www.claudiahouse.com
-```
-
----
-
-## 4. Contact form (one thing to wire up)
-
-Static hosting has no server, so the contact form needs a form service. In
-[`app/contact/page.tsx`](app/contact/page.tsx) replace the placeholder action:
-
-```
-action="https://formspree.io/f/your-id"   ->   your real Formspree / Web3Forms endpoint
-```
-
-Same for the newsletter inputs (point them at Mailchimp/Buttondown), or we later switch the project to
-`output: "standalone"` + `next start` behind nginx if you want server-side handling.
-
----
-
-## Project map
-
-| Path | What |
-|------|------|
-| `app/` | Pages (home, about, programs, team, gallery, get-involved, contact) |
-| `components/` | Header, Footer, PageBanner, CtaBand, Gallery (filter + lightbox) |
-| `lib/content.ts` | All site copy & data in one place — edit here |
-| `app/globals.css` | Design tokens (colors, fonts, type scale) |
-| `public/images/` | Real photos, sorted by section |
-| `out/` | Build output to deploy (generated by `npm run build`) |
+See [SECURITY.md](SECURITY.md) for security controls and hosting limits.

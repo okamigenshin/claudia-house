@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Privacy Policy",
   description:
-    "How Claudia House handles information collected through this website, including contact form submissions and newsletter sign-ups.",
+    "How Claudia House handles information collected through this website, including email enquiries and external services.",
   path: "/privacy/",
 });
 
@@ -20,7 +20,7 @@ export const metadata = pageMetadata({
 // privacy notice. Please have it reviewed before relying on it for grant or
 // advertising applications.
 
-const UPDATED = "July 2026";
+const UPDATED = "October 2026";
 
 export default function Privacy() {
   return (
@@ -40,23 +40,19 @@ export default function Privacy() {
             <p className="soft mt-4">
               This website does not track you. It sets no cookies, runs no analytics, and includes no
               advertising or social media trackers. The only information we receive is what you choose to
-              type into a form and send us.
+              send to us by email or phone.
             </p>
           </Block>
 
           <Block title="What we collect">
             <p className="soft mt-4">
-              <strong>Contact form.</strong> If you use the contact form, we receive the name, email
-              address, reason for contact and message you enter. We use this only to reply to you and, where
-              relevant, to process a referral, volunteer enquiry or job application.
+              <strong>Enquiries.</strong> If you email or call us, we receive the information you
+              choose to share. We use it to respond to your enquiry. This website does not collect
+              contact form submissions or newsletter sign-ups.
             </p>
             <p className="soft mt-4">
-              <strong>Newsletter sign-up.</strong> If you subscribe, we receive your email address and use it
-              only to send occasional updates about Claudia House. Every email includes a way to unsubscribe.
-            </p>
-            <p className="soft mt-4">
-              <strong>Nothing else.</strong> We do not collect your IP address, browsing behaviour, device
-              details or location through this site.
+              GitHub Pages may log request information when serving the site. The Google Maps embed
+              and external donation links are subject to their providers&rsquo; own data practices.
             </p>
           </Block>
 
@@ -79,7 +75,7 @@ export default function Privacy() {
           <Block title="Services we rely on">
             <p className="soft mt-4">
               This site is hosted on GitHub Pages, which may log standard server request information as part
-              of delivering the page. Form submissions are delivered by a third-party form service, and the
+              of delivering the page. The
               map on our contact page is embedded from Google Maps, which may set its own cookies if you
               interact with it. We do not control those services&rsquo; own data practices.
             </p>
@@ -88,7 +84,7 @@ export default function Privacy() {
           <Block title="How long we keep things">
             <p className="soft mt-4">
               We keep enquiries only as long as needed to respond and to maintain reasonable records of our
-              work. Newsletter subscriptions are kept until you unsubscribe.
+              work.
             </p>
           </Block>
 

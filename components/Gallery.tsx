@@ -3,17 +3,11 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { gallery, type GalleryCategory } from "@/lib/content";
 import { asset } from "@/lib/config";
-import sizes from "@/lib/image-sizes.json";
 import Img from "@/components/Img";
 
 const filters: ("All" | GalleryCategory)[] = [
   "All", "Exterior", "Living Spaces", "Bedrooms", "Outdoors & Garden",
 ];
-
-const dim = (src: string): { width?: number; height?: number } => {
-  const d = (sizes as Record<string, number[]>)[src];
-  return d?.length === 2 ? { width: d[0], height: d[1] } : {};
-};
 
 export default function Gallery() {
   const [filter, setFilter] = useState<(typeof filters)[number]>("All");
@@ -128,7 +122,6 @@ export default function Gallery() {
             &#8249;
           </button>
           <figure className="max-h-[88vh] max-w-5xl" onClick={(e) => e.stopPropagation()}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={asset(items[lightbox].src)} alt={items[lightbox].alt} className="max-h-[80vh] w-auto rounded-2xl" />
             <figcaption className="mt-3 text-center text-white/80">{items[lightbox].alt}</figcaption>
           </figure>

@@ -2,7 +2,7 @@
 // Cross-platform: sets the env vars in-process rather than relying on shell syntax.
 //
 //   npm run build:domain     -> build only
-//   npm run deploy:domain    -> build + .nojekyll + push to gh-pages
+// GitHub Actions publishes the checked export after this build succeeds.
 //
 // public/CNAME tells GitHub Pages to serve the site at claudiahouse.com, and is
 // copied into out/ automatically as part of the static export.
@@ -16,4 +16,9 @@ const env = {
 
 console.log("Building for https://claudiahouse.com (basePath: none)\n");
 const r = spawnSync("npx", ["next", "build"], { env, stdio: "inherit", shell: true });
-process.exit(r.status ?? 1);
+if (r.status !== 0) process.exit(r.status ?? 1);
+const secured = spawnSync(process.execPath, ["scripts/secure-export.mjs"], {
+  env,
+  stdio: "inherit",
+});
+process.exit(secured.status ?? 1);
