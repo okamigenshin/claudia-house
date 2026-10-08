@@ -10,7 +10,6 @@ export default function Footer() {
           <div>
             {/* Full lockup here rather than a wordmark: this is where the
                 "Dream big" tagline belongs. Light tint for the deep-teal ground. */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={asset("/images/shared/logo-lockup-light.png")}
               alt="Claudia House — Dream big"
@@ -43,18 +42,7 @@ export default function Footer() {
 
           <div>
             <h3 className="mb-4 text-xl text-white">Stay Updated</h3>
-            <form className="flex flex-col gap-3">
-              {/* bg-white is required: Tailwind's preflight resets inputs to a
-                  transparent background, which left dark text on the dark footer */}
-              <input
-                type="email"
-                placeholder="Your email"
-                aria-label="Email address"
-                autoComplete="email"
-                className="rounded-[10px] bg-white px-4 py-3 text-[var(--color-ink)] placeholder:text-[var(--color-ink-soft)]"
-              />
-              <button type="submit" className="btn btn-primary w-full justify-center">Subscribe</button>
-            </form>
+            <a href={`mailto:${site.email}`} className="btn btn-primary w-full justify-center">Email us</a>
             <p className="mt-4 text-[15px] text-[#aecfd8]">
               {site.address}<br />
               {site.phone} &middot; {site.email}

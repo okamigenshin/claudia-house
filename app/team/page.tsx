@@ -1,7 +1,6 @@
 import PageBanner from "@/components/PageBanner";
 import CtaBand from "@/components/CtaBand";
 import { staff, board } from "@/lib/content";
-import { asset } from "@/lib/config";
 import Img from "@/components/Img";
 import { pageMetadata } from "@/lib/seo";
 
@@ -63,7 +62,6 @@ export default function Team() {
           <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
             {board.map((p) => (
               <article key={p.name} className="overflow-hidden rounded-2xl border border-[var(--color-line)] bg-white">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <Img src={p.img} alt={`Portrait of ${p.name}`} sizes="(min-width: 1024px) 23vw, (min-width: 640px) 46vw, 92vw" className="aspect-square w-full object-cover object-[50%_22%]" />
                 <div className="p-6">
                   <h3 className="text-[1.3rem]">{p.name}</h3>

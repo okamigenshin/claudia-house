@@ -37,7 +37,6 @@ export default function Img({
 
   // Unknown source: fall back to a plain img rather than rendering nothing.
   if (!e) {
-    // eslint-disable-next-line @next/next/no-img-element
     return <img src={asset(src)} alt={alt} className={className} loading={priority ? "eager" : "lazy"} />;
   }
 
@@ -47,7 +46,6 @@ export default function Img({
     <picture className="contents">
       <source type="image/webp" srcSet={srcSet(e.webp)} sizes={sizes} />
       {e.jpg.length > 0 && <source type="image/jpeg" srcSet={srcSet([...e.jpg, { w: e.w, u: src }])} sizes={sizes} />}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={asset(src)}
         alt={alt}

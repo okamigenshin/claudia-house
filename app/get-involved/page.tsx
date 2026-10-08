@@ -1,7 +1,6 @@
 import Link from "next/link";
 import PageBanner from "@/components/PageBanner";
 import { jobs, majorSupporters, communitySupporters, supporterLinks, site } from "@/lib/content";
-import { asset } from "@/lib/config";
 import Icon, { type IconName } from "@/components/Icon";
 import Img from "@/components/Img";
 import { pageMetadata } from "@/lib/seo";

@@ -26,7 +26,6 @@ export default function Header() {
         {/* Emblem + wordmark. alt="" on the mark because the adjacent text already
             names the organisation — otherwise screen readers announce it twice. */}
         <Link href="/" aria-label="Claudia House — home" className="flex items-center gap-3">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={asset("/images/shared/logo-mark.png")}
             alt=""

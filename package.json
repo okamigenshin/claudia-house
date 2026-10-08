@@ -9,24 +9,25 @@
     "lint": "eslint",
     "nojekyll": "node scripts/nojekyll.mjs",
     "images": "node scripts/optimize-images.mjs && node scripts/image-sizes.mjs && node scripts/generate-variants.mjs",
-    "deploy": "next build && npm run nojekyll && gh-pages -d out -t -b gh-pages",
     "build:domain": "node scripts/build-domain.mjs",
-    "deploy:domain": "node scripts/build-domain.mjs && npm run nojekyll && gh-pages -d out -t -b gh-pages"
+    "check:site": "python .github/scripts/check_site.py"
   },
   "dependencies": {
-    "next": "16.2.9",
+    "next": "16.4.0",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.5",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.2.9",
-    "gh-pages": "^6.3.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.13.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "typescript-eslint": "^8.71.1"
   }
 }

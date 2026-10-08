@@ -1,7 +1,6 @@
 import PageBanner from "@/components/PageBanner";
 import CtaBand from "@/components/CtaBand";
 import { focusAreas } from "@/lib/content";
-import { asset } from "@/lib/config";
 import Img from "@/components/Img";
 import { pageMetadata } from "@/lib/seo";
 
