@@ -13,9 +13,9 @@
     "check:site": "python .github/scripts/check_site.py"
   },
   "dependencies": {
-    "next": "16.4.0",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "next": "16.4.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",
