@@ -493,6 +493,118 @@
    }
   ]
  },
+ "/images/news/building-progress.jpeg": {
+  "w": 1200,
+  "h": 1600,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/news/r/building-progress-480.webp"
+   },
+   {
+    "w": 960,
+    "u": "/images/news/r/building-progress-960.webp"
+   },
+   {
+    "w": 1200,
+    "u": "/images/news/r/building-progress-1200.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/news/r/building-progress-480.jpg"
+   },
+   {
+    "w": 960,
+    "u": "/images/news/r/building-progress-960.jpg"
+   }
+  ]
+ },
+ "/images/news/building-utilities.jpeg": {
+  "w": 1500,
+  "h": 2000,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/news/r/building-utilities-480.webp"
+   },
+   {
+    "w": 960,
+    "u": "/images/news/r/building-utilities-960.webp"
+   },
+   {
+    "w": 1500,
+    "u": "/images/news/r/building-utilities-1500.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/news/r/building-utilities-480.jpg"
+   },
+   {
+    "w": 960,
+    "u": "/images/news/r/building-utilities-960.jpg"
+   }
+  ]
+ },
+ "/images/news/youth-transport-front.jpeg": {
+  "w": 1200,
+  "h": 1600,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/news/r/youth-transport-front-480.webp"
+   },
+   {
+    "w": 960,
+    "u": "/images/news/r/youth-transport-front-960.webp"
+   },
+   {
+    "w": 1200,
+    "u": "/images/news/r/youth-transport-front-1200.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/news/r/youth-transport-front-480.jpg"
+   },
+   {
+    "w": 960,
+    "u": "/images/news/r/youth-transport-front-960.jpg"
+   }
+  ]
+ },
+ "/images/news/youth-transport-side.jpeg": {
+  "w": 1600,
+  "h": 900,
+  "webp": [
+   {
+    "w": 480,
+    "u": "/images/news/r/youth-transport-side-480.webp"
+   },
+   {
+    "w": 960,
+    "u": "/images/news/r/youth-transport-side-960.webp"
+   },
+   {
+    "w": 1600,
+    "u": "/images/news/r/youth-transport-side-1600.webp"
+   }
+  ],
+  "jpg": [
+   {
+    "w": 480,
+    "u": "/images/news/r/youth-transport-side-480.jpg"
+   },
+   {
+    "w": 960,
+    "u": "/images/news/r/youth-transport-side-960.jpg"
+   }
+  ]
+ },
  "/images/services/01-services.jpg": {
   "w": 1200,
   "h": 800,
