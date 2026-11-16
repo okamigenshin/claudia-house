@@ -11,6 +11,13 @@ gallery photos described from visual inspection (source site had no captions).
 - `services/` — Services page imagery
 - `support/` — Support Us page imagery
 - `gallery/` — House photo gallery (17 photos)
+- `news/` — Construction and youth transportation photos supplied by Lambert on 11 November 2026 for News & Updates; saved from WhatsApp on 16 November 2026
+
+## news/
+- `building-progress.jpeg` — Multipurpose building construction progress
+- `building-utilities.jpeg` — Installed underground utility connections
+- `youth-transport-side.jpeg` — New youth transportation vehicle, side view
+- `youth-transport-front.jpeg` — New youth transportation vehicle, front view
 
 ## shared/
 - `banner-claudia.jpg` (580 KB)

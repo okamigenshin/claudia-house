@@ -2,6 +2,7 @@ import Link from "next/link";
 import { pillars, gallery, supporters, missionParagraphs, missionStatement } from "@/lib/content";
 import Icon, { type IconName } from "@/components/Icon";
 import Img from "@/components/Img";
+import NewsUpdates from "@/components/NewsUpdates";
 
 const stats = [
   { n: "100%", l: "Trauma-informed, culturally responsive care" },
@@ -27,6 +28,7 @@ export default function Home() {
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Link href="/get-involved" className="btn btn-primary">Support a Youth &rarr;</Link>
+              <a href="#news-updates" className="btn btn-outline">News &amp; Updates &darr;</a>
             </div>
           </div>
           <Img
@@ -89,6 +91,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <NewsUpdates />
 
       {/* GALLERY PREVIEW */}
       <section className="section">

@@ -105,6 +105,7 @@ export const majorSupporters = [
   "The Collins Foundation",
   "Meyer Memorial Trust",
   "Oregon Community Foundation",
+  "Autzen Foundation",
 ];
 
 export const communitySupporters = [
@@ -117,6 +118,33 @@ export const supporterLinks: Record<string, string> = {};
 
 // Combined list (used by the homepage "In Partnership With" row).
 export const supporters = [...majorSupporters, ...communitySupporters];
+
+export const newsUpdates = [
+  {
+    id: "multipurpose-building",
+    title: "Multipurpose Building Update",
+    body: "Work is underway on Claudia House’s multipurpose building. Underground utility connections are complete, and foundation preparation is in progress. The new space will support youth with a workout area, office, bathroom, dedicated space to wash linens, storage, and an outdoor deck. We look forward to sharing more progress as construction continues.",
+    photos: [
+      { src: "/images/news/building-progress.jpeg", alt: "Construction progress beside Claudia House’s multipurpose building" },
+      { src: "/images/news/building-utilities.jpeg", alt: "Underground utility connections installed for the multipurpose building" },
+    ],
+  },
+  {
+    id: "youth-transportation",
+    title: "New Vehicle for Youth Transportation",
+    body: "Thanks to our generous donors, Claudia House was able to purchase a new vehicle to help transport youth to school, work, appointments, and other program activities. We’re grateful for this support and the difference it will make in helping youth stay connected to the opportunities and services they need.",
+    photos: [
+      { src: "/images/news/youth-transport-side.jpeg", alt: "Claudia House’s new silver vehicle for youth transportation" },
+      { src: "/images/news/youth-transport-front.jpeg", alt: "Front view of the new Claudia House youth transportation vehicle" },
+    ],
+  },
+  {
+    id: "graduate-updates",
+    title: "Graduate Updates Coming Soon",
+    body: "We’re preparing to share stories from Claudia House graduates and how they’ve grown since their time with us. We’re working through the necessary permissions and look forward to sharing their updates when they’re ready.",
+    photos: [],
+  },
+];
 
 // About page narrative ("Born from Experience. Built for Possibility.")
 export const aboutStory = {
